@@ -113,9 +113,9 @@ export default function Cabanas() {
                   ))}
                 </div>
               </div>
-              <button className="btn btn-primary" style={{ width: '100%' }}>
-                Ver Disponibilidad
-              </button>
+              <a href="https://wa.me/5491123456789?text=Hola! Me interesa la Cabaña Familiar. ¿Podrían darme más información?" target="_blank" className="btn btn-primary" style={{ width: '100%', textAlign: 'center', display: 'block' }}>
+                Consultar por WhatsApp
+              </a>
             </div>
           ))}
         </div>

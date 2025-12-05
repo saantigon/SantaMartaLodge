@@ -2,8 +2,9 @@ import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import Cabanas from '@/components/Cabanas'
 import SobreNosotros from '@/components/SobreNosotros'
+import ImageGallery from '@/components/ImageGallery'
 import Ubicacion from '@/components/Ubicacion'
-import ReservasRapidas from '@/components/ReservasRapidas'
+import WhatsAppReservas from '@/components/WhatsAppReservas'
 import FAQ from '@/components/FAQ'
 import Contacto from '@/components/Contacto'
 import Footer from '@/components/Footer'
@@ -15,8 +16,9 @@ export default function Home() {
       <Hero />
       <Cabanas />
       <SobreNosotros />
+      <ImageGallery />
       <Ubicacion />
-      <ReservasRapidas />
+      <WhatsAppReservas />
       <FAQ />
       <Contacto />
       <Footer />

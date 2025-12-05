@@ -5,9 +5,43 @@ export default function Hero() {
       minHeight: '100vh',
       display: 'flex',
       alignItems: 'center',
-      paddingTop: '80px'
+      paddingTop: '80px',
+      position: 'relative',
+      overflow: 'hidden'
     }}>
-      <div className="container">
+      {/* Imágenes flotantes de fondo */}
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        pointerEvents: 'none',
+        zIndex: 1
+      }}>
+        {[1, 2, 3, 4, 5].map((i) => (
+          <div
+            key={i}
+            style={{
+              position: 'absolute',
+              width: '80px',
+              height: '80px',
+              background: 'rgba(255, 255, 255, 0.1)',
+              borderRadius: '50%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: '2rem',
+              animation: `float${i} ${8 + i * 2}s ease-in-out infinite`,
+              top: `${Math.random() * 80}%`,
+              left: `${Math.random() * 90}%`
+            }}
+          >
+            {i % 2 === 0 ? '🏡' : '🌲'}
+          </div>
+        ))}
+      </div>
+      <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div style={{
           display: 'grid',
           gridTemplateColumns: '1fr',
@@ -22,7 +56,7 @@ export default function Hero() {
               marginBottom: '1.5rem',
               color: 'var(--text-primary)'
             }}>
-              Bienvenido a Santa Marta
+              Bienvenido a Santa Marta Lodge
             </h1>
             <p style={{
               fontSize: '1.25rem',
@@ -40,8 +74,8 @@ export default function Hero() {
               justifyContent: 'center',
               flexWrap: 'wrap'
             }}>
-              <a href="#reservas" className="btn btn-primary">
-                Reservar Ahora
+              <a href="https://wa.me/5491123456789?text=Hola! Quiero hacer una consulta sobre las cabañas de Santa Marta Lodge" target="_blank" className="btn btn-primary">
+                Consultar por WhatsApp
               </a>
               <a href="#cabanas" className="btn btn-secondary">
                 Ver Cabañas

@@ -4,8 +4,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Complejo de Cabañas Santa Marta',
-  description: 'Disfruta de la naturaleza en nuestras hermosas cabañas',
+  title: 'Santa Marta Lodge - Complejo de Cabañas',
+  description: 'Disfruta de la naturaleza en nuestras hermosas cabañas en Santa Marta Lodge',
 }
 
 export default function RootLayout({

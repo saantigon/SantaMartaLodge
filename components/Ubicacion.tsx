@@ -15,30 +15,31 @@ export default function Ubicacion() {
           {/* Mapa */}
           <div className="card">
             <div style={{
-              background: 'linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%)',
               height: '400px',
               borderRadius: '0.5rem',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
+              overflow: 'hidden',
               marginBottom: '1rem'
             }}>
-              <div style={{ textAlign: 'center' }}>
-                <MapPin size={48} style={{ color: 'var(--text-primary)', marginBottom: '1rem' }} />
-                <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>
-                  🗺️ Mapa Interactivo
-                </p>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '0.5rem' }}>
-                  (Aquí se integraría Google Maps o similar)
-                </p>
-              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0168!2d-58.3816!3d-34.6037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM2JzEzLjMiUyA1OMKwMjInNTcuOCJX!5e0!3m2!1ses!2sar!4v1234567890"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Ubicación Santa Marta Lodge"
+              />
             </div>
             <div style={{ textAlign: 'center' }}>
               <h3 style={{ marginBottom: '0.5rem', color: 'var(--text-primary)' }}>
-                Complejo Santa Marta
+                Santa Marta Lodge
               </h3>
               <p style={{ color: 'var(--text-secondary)' }}>
                 📍 Ruta Provincial 123, Km 45, Villa Serrana
+              </p>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '0.5rem' }}>
+                Coordenadas: -34.6037, -58.3816
               </p>
             </div>
           </div>

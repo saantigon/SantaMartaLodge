@@ -25,7 +25,7 @@ export default function Footer() {
               alignItems: 'center',
               gap: '0.5rem'
             }}>
-              🏡 Santa Marta Cabañas
+              🏡 Santa Marta Lodge
             </h3>
             <p style={{
               color: '#CBD5E0',
@@ -64,8 +64,8 @@ export default function Footer() {
                 </a>
               </li>
               <li style={{ marginBottom: '0.5rem' }}>
-                <a href="#reservas" style={{ color: '#CBD5E0', textDecoration: 'none' }}>
-                  Hacer Reserva
+                <a href="https://wa.me/5491123456789" target="_blank" style={{ color: '#CBD5E0', textDecoration: 'none' }}>
+                  Reservar por WhatsApp
                 </a>
               </li>
               <li style={{ marginBottom: '0.5rem' }}>
@@ -171,7 +171,7 @@ export default function Footer() {
             alignItems: 'center',
             gap: '0.5rem'
           }}>
-            © 2024 Santa Marta Cabañas. Hecho con <Heart size={16} style={{ color: '#F56565' }} /> para nuestros huéspedes.
+            © 2024 Santa Marta Lodge. Hecho con <Heart size={16} style={{ color: '#F56565' }} /> para nuestros huéspedes.
           </p>
           <div style={{
             display: 'flex',

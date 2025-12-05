@@ -1,8 +1,11 @@
 'use client'
 import { useState } from 'react'
 import { Calendar, Users, Phone, Mail } from 'lucide-react'
+import { useReservas } from '@/lib/reservas'
 
 export default function ReservasRapidas() {
+  const { crearReserva, verificarDisponibilidad, recargarReservas } = useReservas()
+  const [enviando, setEnviando] = useState(false)
   const [formData, setFormData] = useState({
     fechaEntrada: '',
     fechaSalida: '',
@@ -14,9 +17,47 @@ export default function ReservasRapidas() {
     comentarios: ''
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    alert('¡Solicitud de reserva enviada! Te contactaremos pronto.')
+    setEnviando(true)
+    
+    try {
+      const nuevaReserva = await crearReserva({
+        cabaña: formData.cabana,
+        fechaInicio: formData.fechaEntrada,
+        fechaFin: formData.fechaSalida,
+        huespedes: parseInt(formData.huespedes),
+        cliente: {
+          nombre: formData.nombre,
+          email: formData.email,
+          telefono: formData.telefono
+        },
+        comentarios: formData.comentarios
+      })
+      
+      // Recargar datos para actualizar el calendario
+      await recargarReservas()
+      
+      // Forzar recarga de página para actualizar calendario
+      window.location.reload()
+      
+      alert('¡Reserva creada exitosamente! Te contactaremos para confirmar.')
+      setFormData({
+        fechaEntrada: '',
+        fechaSalida: '',
+        huespedes: '2',
+        cabana: '',
+        nombre: '',
+        email: '',
+        telefono: '',
+        comentarios: ''
+      })
+    } catch (error: any) {
+      const mensaje = error.message || 'Error al crear la reserva. Inténtalo nuevamente.'
+      alert(mensaje)
+    } finally {
+      setEnviando(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -291,9 +332,15 @@ export default function ReservasRapidas() {
               <button
                 type="submit"
                 className="btn btn-primary"
-                style={{ width: '100%', fontSize: '1.1rem' }}
+                style={{ 
+                  width: '100%', 
+                  fontSize: '1.1rem',
+                  opacity: enviando ? 0.7 : 1,
+                  cursor: enviando ? 'not-allowed' : 'pointer'
+                }}
+                disabled={enviando}
               >
-                Enviar Solicitud de Reserva
+                {enviando ? 'Procesando...' : 'Enviar Solicitud de Reserva'}
               </button>
             </form>
           </div>

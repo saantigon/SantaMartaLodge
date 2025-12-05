@@ -123,10 +123,10 @@ export default function FAQ() {
             color: 'var(--text-secondary)',
             marginBottom: '1.5rem'
           }}>
-            Estamos aquí para ayudarte. Contáctanos directamente y resolveremos todas tus dudas.
+            Estamos aquí para ayudarte. Contáctanos por WhatsApp y resolveremos todas tus dudas.
           </p>
-          <a href="#contacto" className="btn btn-secondary">
-            Contactar Ahora
+          <a href="https://wa.me/5491123456789?text=Hola! Tengo una consulta sobre Santa Marta Lodge" target="_blank" className="btn btn-secondary">
+            Consultar por WhatsApp
           </a>
         </div>
       </div>

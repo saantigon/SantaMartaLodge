@@ -8,8 +8,8 @@ export default function Header() {
   const menuItems = [
     { href: '#cabanas', label: 'Cabañas' },
     { href: '#sobre-nosotros', label: 'Sobre Nosotros' },
+    { href: '#galeria', label: 'Galería' },
     { href: '#ubicacion', label: 'Ubicación' },
-    { href: '#reservas', label: 'Reservas' },
     { href: '#faq', label: 'FAQ' },
     { href: '#contacto', label: 'Contacto' }
   ]
@@ -34,7 +34,7 @@ export default function Header() {
           fontWeight: 'bold',
           color: 'var(--text-primary)'
         }}>
-          🏡 Santa Marta Cabañas
+          🏡 Santa Marta Lodge
         </div>
 
         {/* Desktop Menu */}

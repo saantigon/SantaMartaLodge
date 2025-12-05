@@ -116,6 +116,39 @@ body {
   transform: translateY(-2px);
 }
 
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-2px) !important;
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-30px) rotate(-180deg); }
+}
+
+@keyframes float3 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-25px) rotate(90deg); }
+}
+
+@keyframes float4 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-35px) rotate(-90deg); }
+}
+
+@keyframes float5 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(270deg); }
+}
+
 @media (min-width: 769px) {
   .desktop-nav {
     display: block !important;

@@ -26,7 +26,7 @@ export default function Contacto() {
   ]
 
   const redesSociales = [
-    { nombre: "WhatsApp", icono: "💬", enlace: "https://wa.me/5491123456789" },
+    { nombre: "WhatsApp", icono: "💬", enlace: "https://wa.me/5491123456789?text=Hola! Quiero hacer una consulta sobre Santa Marta Lodge" },
     { nombre: "Instagram", icono: "📷", enlace: "#" },
     { nombre: "Facebook", icono: "📘", enlace: "#" },
     { nombre: "TripAdvisor", icono: "✈️", enlace: "#" }
