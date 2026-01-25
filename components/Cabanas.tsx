@@ -4,30 +4,30 @@ export default function Cabanas() {
   const cabanas = [
     {
       id: 1,
-      nombre: "Cabaña Familiar",
-      capacidad: "6 personas",
-      precio: "$120/noche",
+      nombre: "Nina",
+      capacidad: "2 personas",
+      precio: "$95.000/noche",
       imagen: "🏡",
-      amenidades: ["WiFi", "Estacionamiento", "Cocina completa", "Terraza"],
-      descripcion: "Perfecta para familias, con amplio espacio y todas las comodidades."
+      amenidades: ["WiFi", "Estacionamiento", "Cocina completa", "Pileta", "Parrilla/Asador", "Aire Acondicionado", "Calefacción", "Desayuno"],
+      descripcion: "Perfecta para 2 personas. Equipada para hasta 4 personas."
     },
     {
       id: 2,
-      nombre: "Cabaña Romántica",
+      nombre: "Wayra (En preparación)",
       capacidad: "2 personas",
-      precio: "$80/noche",
+      precio: "$95.000/noche",
       imagen: "💕",
-      amenidades: ["WiFi", "Jacuzzi", "Chimenea", "Vista al lago"],
-      descripcion: "Ideal para parejas que buscan un escape romántico y privado."
+      amenidades: ["WiFi", "Estacionamiento", "Cocina completa", "Pileta", "Parrilla/Asador", "Aire Acondicionado", "Calefacción", "Desayuno"],
+      descripcion: "Perfecta para 2 personas. Equipada para hasta 4 personas."
     },
     {
       id: 3,
-      nombre: "Cabaña Aventurera",
-      capacidad: "4 personas",
-      precio: "$100/noche",
+      nombre: "Yaku (Proximamente)",
+      capacidad: "2 personas",
+      precio: "$95.000/noche",
       imagen: "🏔️",
-      amenidades: ["WiFi", "Parrilla", "Kayaks", "Senderos"],
-      descripcion: "Para los amantes de la aventura y actividades al aire libre."
+      amenidades: ["WiFi", "Estacionamiento", "Cocina completa", "Pileta", "Parrilla/Asador", "Aire Acondicionado", "Calefacción", "Desayuno"],
+      descripcion: "Perfecta para 2 personas. Equipada para hasta 4 personas."
     }
   ]
 

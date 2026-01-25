@@ -32,8 +32,7 @@ export default function Footer() {
               lineHeight: '1.6',
               marginBottom: '1rem'
             }}>
-              Tu refugio perfecto en la naturaleza. Más de 15 años brindando 
-              experiencias únicas en un entorno natural privilegiado.
+              En el corazón del Valle de Traslasierra, al pie del Cerro Champaquí. Tu refugio perfecto para desconectar, explorar senderos y vivir la naturaleza serrana.
             </p>
             <div style={{
               display: 'flex',
@@ -52,7 +51,7 @@ export default function Footer() {
               fontWeight: 'bold',
               marginBottom: '1rem'
             }}>
-              Enlaces Rápidos
+              Enlaces rápidos
             </h4>
             <ul style={{
               listStyle: 'none',
@@ -60,7 +59,7 @@ export default function Footer() {
             }}>
               <li style={{ marginBottom: '0.5rem' }}>
                 <a href="#cabanas" style={{ color: '#CBD5E0', textDecoration: 'none' }}>
-                  Nuestras Cabañas
+                  Nuestras cabañas
                 </a>
               </li>
               <li style={{ marginBottom: '0.5rem' }}>
@@ -70,12 +69,12 @@ export default function Footer() {
               </li>
               <li style={{ marginBottom: '0.5rem' }}>
                 <a href="#ubicacion" style={{ color: '#CBD5E0', textDecoration: 'none' }}>
-                  Cómo Llegar
+                  Cómo llegar
                 </a>
               </li>
               <li style={{ marginBottom: '0.5rem' }}>
                 <a href="#faq" style={{ color: '#CBD5E0', textDecoration: 'none' }}>
-                  Preguntas Frecuentes
+                  Preguntas frecuentes
                 </a>
               </li>
             </ul>
@@ -99,7 +98,7 @@ export default function Footer() {
               }}>
                 <MapPin size={16} />
                 <span style={{ fontSize: '0.9rem' }}>
-                  Ruta Provincial 123, Km 45
+                  Ángel Marcucci S/N, Villa de Las Rosas
                 </span>
               </div>
               <div style={{
@@ -110,7 +109,7 @@ export default function Footer() {
               }}>
                 <Phone size={16} />
                 <span style={{ fontSize: '0.9rem' }}>
-                  +54 11 1234-5678
+                  +54 9 3388 67-0986
                 </span>
               </div>
               <div style={{
@@ -138,16 +137,13 @@ export default function Footer() {
             </h4>
             <div style={{ color: '#CBD5E0', fontSize: '0.9rem' }}>
               <p style={{ marginBottom: '0.5rem' }}>
-                <strong>Check-in:</strong> 15:00 - 20:00
+                <strong>Check-in:</strong> Desde las 13:00
               </p>
               <p style={{ marginBottom: '0.5rem' }}>
-                <strong>Check-out:</strong> 08:00 - 11:00
+                <strong>Check-out:</strong> Hasta las 10:00
               </p>
               <p style={{ marginBottom: '0.5rem' }}>
                 <strong>Consultas:</strong> 8:00 - 22:00
-              </p>
-              <p>
-                <strong>Emergencias:</strong> 24 horas
               </p>
             </div>
           </div>
@@ -173,19 +169,6 @@ export default function Footer() {
           }}>
             © 2024 Santa Marta Lodge. Hecho con <Heart size={16} style={{ color: '#F56565' }} /> para nuestros huéspedes.
           </p>
-          <div style={{
-            display: 'flex',
-            gap: '1rem',
-            fontSize: '0.85rem',
-            color: '#CBD5E0'
-          }}>
-            <a href="#" style={{ color: '#CBD5E0', textDecoration: 'none' }}>
-              Términos y Condiciones
-            </a>
-            <a href="#" style={{ color: '#CBD5E0', textDecoration: 'none' }}>
-              Política de Privacidad
-            </a>
-          </div>
         </div>
       </div>
     </footer>

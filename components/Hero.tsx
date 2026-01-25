@@ -74,7 +74,7 @@ export default function Hero() {
               justifyContent: 'center',
               flexWrap: 'wrap'
             }}>
-              <a href="https://wa.me/5493388670986?text=Hola! Quiero hacer una consulta sobre las cabañas de Santa Marta Lodge" target="_blank" className="btn btn-primary">
+              <a href="https://wa.me/5493388670986?text=Hola! Quiero hacer una consulta sobre las cabañas Santa Marta Lodge" target="_blank" className="btn btn-primary">
                 Consultar por WhatsApp
               </a>
               <a href="#cabanas" className="btn btn-secondary">

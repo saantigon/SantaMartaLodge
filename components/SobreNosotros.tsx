@@ -56,12 +56,20 @@ export default function SobreNosotros() {
               </p>
               <p style={{
                 color: 'var(--text-secondary)',
-                lineHeight: '1.8'
+                lineHeight: '1.8',
+                marginBottom: '1rem'
               }}>
                 Rodeados de arroyos cristalinos, senderos señalizados y la majestuosidad de las 
                 Sierras de Córdoba, ofrecemos el equilibrio perfecto entre comodidad y conexión 
-                con la naturaleza. Un destino ideal para quienes buscan slow travel, ecoturismo 
-                y experiencias auténticas en las sierras.
+                con la naturaleza. Un destino ideal para quienes buscan slow travel, ecoturismo, 
+                y experiencias auténticas en las sierras; y, sobre todo, tranquilidad y paz.
+              </p>
+              <p style={{
+                color: 'var(--text-secondary)',
+                lineHeight: '1.8'
+              }}>
+                Surgido de un deseo personal, el lugar está pensado para brindar al huésped una experiencia
+                distendida en un espacio que 
               </p>
             </div>
 

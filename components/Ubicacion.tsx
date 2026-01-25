@@ -74,6 +74,7 @@ export default function Ubicacion() {
                 <li>🛣️ Ruta Provincial 14 (asfaltada)</li>
                 <li>🏔️ Valle de Traslasierra</li>
                 <li>🅿️ Estacionamiento gratuito</li>
+                <li>🛬 Desde el Aeropuerto Internacional Valle del Conlara: 1 hora</li>
               </ul>
             </div>
 
@@ -90,10 +91,12 @@ export default function Ubicacion() {
                 </h4>
               </div>
               <div style={{ color: 'var(--text-secondary)', lineHeight: '1.8' }}>
-                <p><strong>Check-in:</strong> 15:00 - 20:00</p>
-                <p><strong>Check-out:</strong> 08:00 - 11:00</p>
+                <p><strong>Check-in:</strong> Desde las 13:00</p>
+                <p><strong>Check-out:</strong> Hasta las 10:00</p>
                 <p><strong>Recepción:</strong> 24 horas</p>
-                <p><strong>Emergencias:</strong> Siempre disponible</p>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: '0.25rem', fontStyle: 'italic' }}>
+                Tanto el horario de check-in como el de check-out podrán ser modificados con antelación.
+              </p>
               </div>
             </div>
           </div>
@@ -106,7 +109,7 @@ export default function Ubicacion() {
               marginBottom: '1rem',
               textAlign: 'center'
             }}>
-              Puntos de Interés Cercanos
+              Puntos de interés cercanos
             </h4>
             <div style={{
               display: 'grid',
@@ -119,7 +122,7 @@ export default function Ubicacion() {
                   Cerro Champaquí
                 </h5>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                  Acceso directo
+                  Acceso Los Molles
                 </p>
               </div>
               <div style={{ textAlign: 'center', padding: '1rem' }}>
@@ -137,7 +140,7 @@ export default function Ubicacion() {
                   Red de Senderos
                 </h5>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                  Acceso inmediato
+                  Cercanía a distintos accesos
                 </p>
               </div>
               <div style={{ textAlign: 'center', padding: '1rem' }}>
@@ -146,7 +149,7 @@ export default function Ubicacion() {
                   Dique La Viña
                 </h5>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                  15 min en auto
+                  20 min en auto
                 </p>
               </div>
               <div style={{ textAlign: 'center', padding: '1rem' }}>
@@ -157,11 +160,11 @@ export default function Ubicacion() {
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
                   En el pueblo
                 </p>
-              </div>
+              </div> 
               <div style={{ textAlign: 'center', padding: '1rem' }}>
-                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🫒</div>
+                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🍷</div>
                 <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
-                  Bodegas y Olivares
+                  Bodegas y Viñedos
                 </h5>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
                   Zona cercana

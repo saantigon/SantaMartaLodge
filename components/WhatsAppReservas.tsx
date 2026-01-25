@@ -8,20 +8,20 @@ export default function WhatsAppReservas() {
   const pasos = [
     {
       numero: 1,
-      titulo: "Contacta por WhatsApp",
-      descripcion: "Envíanos un mensaje con tus fechas preferidas y número de huéspedes",
+      titulo: "Contactá por WhatsApp",
+      descripcion: "Envianos un mensaje con tus fechas preferidas y número de huéspedes.",
       icono: <MessageCircle size={32} />
     },
     {
       numero: 2,
-      titulo: "Confirmamos Disponibilidad",
-      descripcion: "Te respondemos inmediatamente con la disponibilidad y precios",
+      titulo: "Confirmamos disponibilidad",
+      descripcion: "Te respondemos inmediatamente con la disponibilidad y otros detalles que requieras.",
       icono: <CheckCircle size={32} />
     },
     {
       numero: 3,
-      titulo: "Reserva Confirmada",
-      descripcion: "Con una seña del 30% aseguras tu reserva. El resto se paga al llegar",
+      titulo: "Reserva confirmada",
+      descripcion: "Con una seña del 20% asegurás tu reserva. El resto se paga al llegar.",
       icono: <Phone size={32} />
     }
   ]
@@ -138,10 +138,10 @@ export default function WhatsAppReservas() {
           }}>
             <Clock size={32} style={{ color: 'var(--text-primary)', marginBottom: '1rem' }} />
             <h4 style={{ marginBottom: '0.5rem', color: 'var(--text-primary)' }}>
-              Respuesta Inmediata
+              Respuesta inmediata
             </h4>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-              Te respondemos en menos de 30 minutos durante horario de atención
+              Te respondemos en menos de 30 minutos.
             </p>
           </div>
 
@@ -153,10 +153,10 @@ export default function WhatsAppReservas() {
           }}>
             <CheckCircle size={32} style={{ color: 'var(--text-primary)', marginBottom: '1rem' }} />
             <h4 style={{ marginBottom: '0.5rem', color: 'var(--text-primary)' }}>
-              Pago Flexible
+              Pago flexible
             </h4>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-              Seña del 30% para reservar, el resto se abona al momento del check-in
+              Seña del 20% para reservar, el resto se abona al momento del check-in.
             </p>
           </div>
 
@@ -168,10 +168,10 @@ export default function WhatsAppReservas() {
           }}>
             <MessageCircle size={32} style={{ color: 'var(--text-primary)', marginBottom: '1rem' }} />
             <h4 style={{ marginBottom: '0.5rem', color: 'var(--text-primary)' }}>
-              Atención Personalizada
+              Atención personalizada
             </h4>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-              Te asesoramos para elegir la cabaña perfecta según tus necesidades
+              Estamos a disposición para lo que necesites durante toda tu estadía.
             </p>
           </div>
         </div>
@@ -190,7 +190,7 @@ export default function WhatsAppReservas() {
             marginBottom: '1rem',
             color: 'var(--text-primary)'
           }}>
-            Horarios de Atención WhatsApp
+            Horarios de atención WhatsApp
           </h3>
           <div style={{
             display: 'grid',
@@ -199,17 +199,13 @@ export default function WhatsAppReservas() {
             marginTop: '1rem'
           }}>
             <div>
-              <strong>Lunes a Viernes:</strong><br />
+              <strong>Lunes a sábados:</strong><br />
               9:00 - 20:00 hs
             </div>
             <div>
-              <strong>Sábados y Domingos:</strong><br />
-              10:00 - 18:00 hs
-            </div>
-            <div>
-              <strong>Emergencias:</strong><br />
-              24 horas
-            </div>
+              <strong>Domingos:</strong><br />
+              11:00 - 18:00 hs
+            </div>            
           </div>
         </div>
       </div>

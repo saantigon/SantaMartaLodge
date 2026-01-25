@@ -12,31 +12,23 @@ export default function FAQ() {
     },
     {
       pregunta: "¿Cuál es la política de cancelación?",
-      respuesta: "Puedes cancelar hasta 48 horas antes del check-in sin costo. Cancelaciones con menos tiempo tienen un cargo del 50% de la primera noche."
-    },
-    {
-      pregunta: "¿Qué tan lejos está el Cerro Champaquí?",
-      respuesta: "Estamos en el Portal del Champaquí. Desde nuestras cabañas tienes acceso directo a las rutas de ascenso a la cumbre más alta de Córdoba (2790 m). Es ideal para trekkings de día completo o travesías de varios días."
+      respuesta: "Podés cancelar hasta 48 horas antes del check-in sin costo. Las cancelaciones con menos tiempo de antelación implican la pérdida de la reserva."
     },
     {
       pregunta: "¿Se permiten mascotas?",
-      respuesta: "Sí, aceptamos mascotas en todas nuestras cabañas. Hay un cargo adicional por noche por mascota. Deben estar vacunadas y ser de buen comportamiento."
+      respuesta: "No, no aceptamos mascotas en todas nuestras cabañas."
     },
     {
       pregunta: "¿Qué incluye el precio de la cabaña?",
-      respuesta: "El precio incluye: ropa de cama, toallas, WiFi, estacionamiento, acceso a senderos, uso de parrillas y limpieza final. No incluye comida ni bebidas."
+      respuesta: "El precio incluye: desayuno, ropa de cama, toallas, WiFi, estacionamiento, uso de parrillas, piscina y sesión de masajes de cortesía."
     },
     {
       pregunta: "¿Hay lugares para comer cerca?",
-      respuesta: "En Villa de las Rosas (a pocos minutos) encontrarás restaurantes con gastronomía regional, pizzerías, confiterías y la feria de productores con productos orgánicos, aceite de oliva artesanal y vinos de Traslasierra."
-    },
-    {
-      pregunta: "¿Cuál es la mejor época para visitar?",
-      respuesta: "Villa de las Rosas es hermosa todo el año. Primavera y otoño son ideales para trekking. Verano es perfecto para balnearios y arroyos. Invierno ofrece paisajes únicos y menos turistas. El clima serrano es templado y agradable."
+      respuesta: "En Villa de las Rosas encontrarás restaurantes con gastronomía regional, pizzerías, confiterías y la feria de artesanos con gran diversidad de productos. También podemos recomendarte cocina casera."
     },
     {
       pregunta: "¿Hay señal de celular e internet?",
-      respuesta: "Hay WiFi gratuito en todas las cabañas. La señal de celular es limitada pero funcional para emergencias. ¡Perfecto para desconectar y disfrutar la naturaleza!"
+      respuesta: "Hay WiFi gratuito en todas las cabañas. La señal de celular en la zona es limitada pero funcional para emergencias. ¡Perfecto para desconectar y disfrutar la naturaleza!"
     }
   ]
 
@@ -123,7 +115,7 @@ export default function FAQ() {
             color: 'var(--text-secondary)',
             marginBottom: '1.5rem'
           }}>
-            Estamos aquí para ayudarte. Contáctanos por WhatsApp y resolveremos todas tus dudas.
+            Estamos acá para ayudarte. Contactanos por WhatsApp y resolveremos todas tus dudas.
           </p>
           <a href="https://wa.me/5493388670986?text=Hola! Tengo una consulta sobre Santa Marta Lodge" target="_blank" className="btn btn-secondary">
             Consultar por WhatsApp

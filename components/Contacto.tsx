@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react'
 export default function Contacto() {
   const contactos = [
     {
-      tipo: "Reservas y Consultas",
+      tipo: "Reservas y consultas",
       icono: <Phone size={24} />,
       principal: "+54 9 3388 67-0986",
       secundario: "WhatsApp disponible",
@@ -15,13 +15,6 @@ export default function Contacto() {
       principal: "reservas@santamarta.com",
       secundario: "info@santamarta.com",
       horario: "Respuesta en 24hs"
-    },
-    {
-      tipo: "Emergencias",
-      icono: <Phone size={24} />,
-      principal: "+54 11 9876-5432",
-      secundario: "Solo urgencias",
-      horario: "24 horas"
     }
   ]
 
@@ -29,13 +22,13 @@ export default function Contacto() {
     { nombre: "WhatsApp", icono: "💬", enlace: "https://wa.me/5493388670986?text=Hola! Quiero hacer una consulta sobre Santa Marta Lodge" },
     { nombre: "Instagram", icono: "📷", enlace: "#" },
     { nombre: "Facebook", icono: "📘", enlace: "#" },
-    { nombre: "TripAdvisor", icono: "✈️", enlace: "#" }
+    { nombre: "Booking", icono: "📘", enlace: "#" }
   ]
 
   return (
     <section id="contacto" className="section" style={{ background: 'var(--white)' }}>
       <div className="container">
-        <h2 className="section-title">Contactos Útiles</h2>
+        <h2 className="section-title">Contactos útiles</h2>
         
         <div style={{
           display: 'grid',
@@ -108,7 +101,7 @@ export default function Contacto() {
             marginBottom: '1.5rem',
             color: 'var(--text-primary)'
           }}>
-            Síguenos en Redes Sociales
+            Seguinos en redes sociales
           </h3>
           <div style={{
             display: 'flex',
@@ -160,58 +153,14 @@ export default function Contacto() {
               marginBottom: '0.5rem',
               color: 'var(--text-primary)'
             }}>
-              Dirección Completa
+              Dirección completa
             </h4>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-              Ruta Provincial 123, Km 45<br />
-              Villa Serrana, Provincia<br />
-              Código Postal: 1234
+              Ángel Marcucci S/N<br />
+              Villa de Las Rosas, (5885) Departamento San Javier, Córdoba<br />
             </p>
           </div>
 
-          <div style={{
-            background: 'var(--success-color)',
-            padding: '1.5rem',
-            borderRadius: '1rem',
-            textAlign: 'center'
-          }}>
-            <MessageCircle size={32} style={{ color: 'var(--text-primary)', marginBottom: '1rem' }} />
-            <h4 style={{
-              fontSize: '1.1rem',
-              fontWeight: 'bold',
-              marginBottom: '0.5rem',
-              color: 'var(--text-primary)'
-            }}>
-              Respuesta Garantizada
-            </h4>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-              Te respondemos en menos de 2 horas<br />
-              durante horario de atención<br />
-              ¡Tu consulta es importante!
-            </p>
-          </div>
-
-          <div style={{
-            background: 'var(--primary-color)',
-            padding: '1.5rem',
-            borderRadius: '1rem',
-            textAlign: 'center'
-          }}>
-            <Phone size={32} style={{ color: 'var(--text-primary)', marginBottom: '1rem' }} />
-            <h4 style={{
-              fontSize: '1.1rem',
-              fontWeight: 'bold',
-              marginBottom: '0.5rem',
-              color: 'var(--text-primary)'
-            }}>
-              Atención Personalizada
-            </h4>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-              Hablamos español e inglés<br />
-              Personal capacitado<br />
-              Servicio amigable y profesional
-            </p>
-          </div>
         </div>
       </div>
     </section>
