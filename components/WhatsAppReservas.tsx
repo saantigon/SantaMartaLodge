@@ -2,7 +2,7 @@
 import { MessageCircle, Phone, Clock, CheckCircle } from 'lucide-react'
 
 export default function WhatsAppReservas() {
-  const whatsappNumber = "5491123456789"
+  const whatsappNumber = "5493388670986"
   const whatsappLink = `https://wa.me/${whatsappNumber}`
 
   const pasos = [

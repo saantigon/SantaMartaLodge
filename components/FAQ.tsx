@@ -7,36 +7,36 @@ export default function FAQ() {
 
   const faqs = [
     {
+      pregunta: "¿Qué actividades puedo hacer en Villa de las Rosas?",
+      respuesta: "Villa de las Rosas es la Capital del Senderismo de Traslasierra. Puedes hacer trekking al Cerro Champaquí, recorrer senderos como La Calandria y Los Jilgueros, visitar el Balneario Guasmara, el Dique La Viña, hacer cabalgatas, mountain bike, y visitar la feria artesanal del pueblo."
+    },
+    {
       pregunta: "¿Cuál es la política de cancelación?",
       respuesta: "Puedes cancelar hasta 48 horas antes del check-in sin costo. Cancelaciones con menos tiempo tienen un cargo del 50% de la primera noche."
     },
     {
+      pregunta: "¿Qué tan lejos está el Cerro Champaquí?",
+      respuesta: "Estamos en el Portal del Champaquí. Desde nuestras cabañas tienes acceso directo a las rutas de ascenso a la cumbre más alta de Córdoba (2790 m). Es ideal para trekkings de día completo o travesías de varios días."
+    },
+    {
       pregunta: "¿Se permiten mascotas?",
-      respuesta: "Sí, aceptamos mascotas en todas nuestras cabañas. Hay un cargo adicional de $15 por noche por mascota. Deben estar vacunadas y ser de buen comportamiento."
+      respuesta: "Sí, aceptamos mascotas en todas nuestras cabañas. Hay un cargo adicional por noche por mascota. Deben estar vacunadas y ser de buen comportamiento."
     },
     {
       pregunta: "¿Qué incluye el precio de la cabaña?",
       respuesta: "El precio incluye: ropa de cama, toallas, WiFi, estacionamiento, acceso a senderos, uso de parrillas y limpieza final. No incluye comida ni bebidas."
     },
     {
-      pregunta: "¿Hay servicio de comidas?",
-      respuesta: "No tenemos restaurante, pero todas las cabañas tienen cocina completamente equipada. En el pueblo (10 min) hay varios restaurantes y un supermercado."
+      pregunta: "¿Hay lugares para comer cerca?",
+      respuesta: "En Villa de las Rosas (a pocos minutos) encontrarás restaurantes con gastronomía regional, pizzerías, confiterías y la feria de productores con productos orgánicos, aceite de oliva artesanal y vinos de Traslasierra."
     },
     {
-      pregunta: "¿Cuál es la edad mínima para hacer una reserva?",
-      respuesta: "El huésped principal debe ser mayor de 18 años. Los menores deben estar acompañados por un adulto responsable."
-    },
-    {
-      pregunta: "¿Hay actividades incluidas?",
-      respuesta: "Incluimos acceso gratuito a senderos, área de fogatas, juegos de mesa y kayaks (sujeto a disponibilidad). También organizamos caminatas guiadas los fines de semana."
-    },
-    {
-      pregunta: "¿Qué debo traer?",
-      respuesta: "Recomendamos traer: comida y bebidas, protector solar, repelente, ropa cómoda para caminar, y linterna. Proporcionamos todo lo demás."
+      pregunta: "¿Cuál es la mejor época para visitar?",
+      respuesta: "Villa de las Rosas es hermosa todo el año. Primavera y otoño son ideales para trekking. Verano es perfecto para balnearios y arroyos. Invierno ofrece paisajes únicos y menos turistas. El clima serrano es templado y agradable."
     },
     {
       pregunta: "¿Hay señal de celular e internet?",
-      respuesta: "Hay WiFi gratuito en todas las cabañas. La señal de celular es limitada pero funcional para emergencias. ¡Perfecto para desconectar!"
+      respuesta: "Hay WiFi gratuito en todas las cabañas. La señal de celular es limitada pero funcional para emergencias. ¡Perfecto para desconectar y disfrutar la naturaleza!"
     }
   ]
 
@@ -125,7 +125,7 @@ export default function FAQ() {
           }}>
             Estamos aquí para ayudarte. Contáctanos por WhatsApp y resolveremos todas tus dudas.
           </p>
-          <a href="https://wa.me/5491123456789?text=Hola! Tengo una consulta sobre Santa Marta Lodge" target="_blank" className="btn btn-secondary">
+          <a href="https://wa.me/5493388670986?text=Hola! Tengo una consulta sobre Santa Marta Lodge" target="_blank" className="btn btn-secondary">
             Consultar por WhatsApp
           </a>
         </div>

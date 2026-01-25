@@ -1,4 +1,4 @@
-import { MapPin, Clock, Car } from 'lucide-react'
+import { Clock, Car } from 'lucide-react'
 
 export default function Ubicacion() {
   return (
@@ -21,7 +21,7 @@ export default function Ubicacion() {
               marginBottom: '1rem'
             }}>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0168!2d-58.3816!3d-34.6037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM2JzEzLjMiUyA1OMKwMjInNTcuOCJX!5e0!3m2!1ses!2sar!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3456.789!2d-65.0676!3d-31.9607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzHCsDU3JzM4LjUiUyA2NcKwMDQnMDMuNCJX!5e0!3m2!1ses!2sar!4v1234567890"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -36,10 +36,13 @@ export default function Ubicacion() {
                 Santa Marta Lodge
               </h3>
               <p style={{ color: 'var(--text-secondary)' }}>
-                📍 Ruta Provincial 123, Km 45, Villa Serrana
+                📍 Villa de las Rosas, Valle de Traslasierra, Córdoba
               </p>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '0.5rem' }}>
-                Coordenadas: -34.6037, -58.3816
+                Coordenadas: 31°57'38.5"S 65°04'03.4"W
+              </p>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: '0.25rem', fontStyle: 'italic' }}>
+                Portal del Champaquí - Capital del Senderismo
               </p>
             </div>
           </div>
@@ -67,9 +70,9 @@ export default function Ubicacion() {
                 color: 'var(--text-secondary)',
                 lineHeight: '1.8'
               }}>
-                <li>🚗 2 horas desde la capital</li>
-                <li>🛣️ Ruta asfaltada hasta km 40</li>
-                <li>🏔️ 5 km de camino de ripio</li>
+                <li>🚗 Desde Córdoba Capital: 3 horas</li>
+                <li>🛣️ Ruta Provincial 14 (asfaltada)</li>
+                <li>🏔️ Valle de Traslasierra</li>
                 <li>🅿️ Estacionamiento gratuito</li>
               </ul>
             </div>
@@ -111,47 +114,63 @@ export default function Ubicacion() {
               gap: '1rem'
             }}>
               <div style={{ textAlign: 'center', padding: '1rem' }}>
-                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🏞️</div>
+                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🏔️</div>
                 <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
-                  Parque Nacional
-                </h5>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                  15 min caminando
-                </p>
-              </div>
-              <div style={{ textAlign: 'center', padding: '1rem' }}>
-                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🏊</div>
-                <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
-                  Lago Cristalino
-                </h5>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                  5 min caminando
-                </p>
-              </div>
-              <div style={{ textAlign: 'center', padding: '1rem' }}>
-                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🥾</div>
-                <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
-                  Senderos
+                  Cerro Champaquí
                 </h5>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
                   Acceso directo
                 </p>
               </div>
               <div style={{ textAlign: 'center', padding: '1rem' }}>
-                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🏪</div>
+                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>💧</div>
                 <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
-                  Pueblo
+                  Balneario Guasmara
                 </h5>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                  10 min en auto
+                  5 min en auto
+                </p>
+              </div>
+              <div style={{ textAlign: 'center', padding: '1rem' }}>
+                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🥾</div>
+                <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
+                  Red de Senderos
+                </h5>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
+                  Acceso inmediato
+                </p>
+              </div>
+              <div style={{ textAlign: 'center', padding: '1rem' }}>
+                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🌊</div>
+                <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
+                  Dique La Viña
+                </h5>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
+                  15 min en auto
+                </p>
+              </div>
+              <div style={{ textAlign: 'center', padding: '1rem' }}>
+                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🎨</div>
+                <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
+                  Feria Artesanal
+                </h5>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
+                  En el pueblo
+                </p>
+              </div>
+              <div style={{ textAlign: 'center', padding: '1rem' }}>
+                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🫒</div>
+                <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
+                  Bodegas y Olivares
+                </h5>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
+                  Zona cercana
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-
     </section>
   )
 }

@@ -19,7 +19,7 @@ export default function Hero() {
         pointerEvents: 'none',
         zIndex: 1
       }}>
-        {[1, 2, 3, 4, 5].map((i) => (
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((i) => (
           <div
             key={i}
             style={{
@@ -65,8 +65,8 @@ export default function Hero() {
               maxWidth: '600px',
               margin: '0 auto 2rem'
             }}>
-              Disfruta de la tranquilidad y belleza natural en nuestras cómodas cabañas. 
-              El lugar perfecto para desconectar y crear recuerdos inolvidables.
+              En el corazón del Valle de Traslasierra, al pie del Cerro Champaquí. 
+              Tu refugio perfecto para desconectar, explorar senderos y vivir la naturaleza serrana.
             </p>
             <div style={{
               display: 'flex',
@@ -74,7 +74,7 @@ export default function Hero() {
               justifyContent: 'center',
               flexWrap: 'wrap'
             }}>
-              <a href="https://wa.me/5491123456789?text=Hola! Quiero hacer una consulta sobre las cabañas de Santa Marta Lodge" target="_blank" className="btn btn-primary">
+              <a href="https://wa.me/5493388670986?text=Hola! Quiero hacer una consulta sobre las cabañas de Santa Marta Lodge" target="_blank" className="btn btn-primary">
                 Consultar por WhatsApp
               </a>
               <a href="#cabanas" className="btn btn-secondary">

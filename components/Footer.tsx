@@ -64,7 +64,7 @@ export default function Footer() {
                 </a>
               </li>
               <li style={{ marginBottom: '0.5rem' }}>
-                <a href="https://wa.me/5491123456789" target="_blank" style={{ color: '#CBD5E0', textDecoration: 'none' }}>
+                <a href="https://wa.me/5493388670986" target="_blank" style={{ color: '#CBD5E0', textDecoration: 'none' }}>
                   Reservar por WhatsApp
                 </a>
               </li>

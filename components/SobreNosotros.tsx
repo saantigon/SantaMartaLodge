@@ -49,17 +49,19 @@ export default function SobreNosotros() {
                 lineHeight: '1.8',
                 marginBottom: '1rem'
               }}>
-                Desde hace más de 15 años, el Complejo Santa Marta ha sido el refugio perfecto 
-                para quienes buscan desconectar de la rutina y conectar con la naturaleza. 
-                Ubicado en un entorno privilegiado, nuestras cabañas ofrecen la combinación 
-                perfecta entre comodidad moderna y experiencia natural auténtica.
+                Ubicados en Villa de las Rosas, Córdoba, en el corazón del Valle de Traslasierra, 
+                nuestras cabañas son el punto de partida ideal para explorar el Cerro Champaquí, 
+                la cumbre más alta de la provincia. Conocida como la "Capital del Senderismo", 
+                esta región ofrece una experiencia única de turismo de naturaleza y aventura.
               </p>
               <p style={{
                 color: 'var(--text-secondary)',
                 lineHeight: '1.8'
               }}>
-                Cada cabaña ha sido diseñada pensando en el bienestar de nuestros huéspedes, 
-                manteniendo siempre el respeto por el medio ambiente que nos rodea.
+                Rodeados de arroyos cristalinos, senderos señalizados y la majestuosidad de las 
+                Sierras de Córdoba, ofrecemos el equilibrio perfecto entre comodidad y conexión 
+                con la naturaleza. Un destino ideal para quienes buscan slow travel, ecoturismo 
+                y experiencias auténticas en las sierras.
               </p>
             </div>
 

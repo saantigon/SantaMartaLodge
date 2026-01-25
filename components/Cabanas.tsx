@@ -113,7 +113,7 @@ export default function Cabanas() {
                   ))}
                 </div>
               </div>
-              <a href="https://wa.me/5491123456789?text=Hola! Me interesa la Cabaña Familiar. ¿Podrían darme más información?" target="_blank" className="btn btn-primary" style={{ width: '100%', textAlign: 'center', display: 'block' }}>
+              <a href="https://wa.me/5493388670986?text=Hola! Me interesa la Cabaña Familiar. ¿Podrían darme más información?" target="_blank" className="btn btn-primary" style={{ width: '100%', textAlign: 'center', display: 'block' }}>
                 Consultar por WhatsApp
               </a>
             </div>

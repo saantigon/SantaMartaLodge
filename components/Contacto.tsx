@@ -5,7 +5,7 @@ export default function Contacto() {
     {
       tipo: "Reservas y Consultas",
       icono: <Phone size={24} />,
-      principal: "+54 11 1234-5678",
+      principal: "+54 9 3388 67-0986",
       secundario: "WhatsApp disponible",
       horario: "Lun a Dom: 8:00 - 22:00"
     },
@@ -26,7 +26,7 @@ export default function Contacto() {
   ]
 
   const redesSociales = [
-    { nombre: "WhatsApp", icono: "💬", enlace: "https://wa.me/5491123456789?text=Hola! Quiero hacer una consulta sobre Santa Marta Lodge" },
+    { nombre: "WhatsApp", icono: "💬", enlace: "https://wa.me/5493388670986?text=Hola! Quiero hacer una consulta sobre Santa Marta Lodge" },
     { nombre: "Instagram", icono: "📷", enlace: "#" },
     { nombre: "Facebook", icono: "📘", enlace: "#" },
     { nombre: "TripAdvisor", icono: "✈️", enlace: "#" }
