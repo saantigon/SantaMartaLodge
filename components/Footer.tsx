@@ -1,4 +1,7 @@
+'use client'
+
 import { Heart, MapPin, Phone, Mail } from 'lucide-react'
+import { FaWhatsapp, FaInstagram, FaFacebookF } from 'react-icons/fa'
 
 export default function Footer() {
   return (
@@ -38,9 +41,54 @@ export default function Footer() {
               display: 'flex',
               gap: '1rem'
             }}>
-              <a href="#" style={{ color: '#CBD5E0', fontSize: '1.5rem' }}>📷</a>
-              <a href="#" style={{ color: '#CBD5E0', fontSize: '1.5rem' }}>📘</a>
-              <a href="#" style={{ color: '#CBD5E0', fontSize: '1.5rem' }}>💬</a>
+              <a 
+                href="https://instagram.com" 
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ 
+                  color: '#E4405F', 
+                  fontSize: '1.5rem',
+                  transition: 'transform 0.3s ease',
+                  display: 'flex',
+                  alignItems: 'center'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.2)'}
+                onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+              >
+                <FaInstagram />
+              </a>
+              <a 
+                href="https://facebook.com" 
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ 
+                  color: '#1877F2', 
+                  fontSize: '1.5rem',
+                  transition: 'transform 0.3s ease',
+                  display: 'flex',
+                  alignItems: 'center'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.2)'}
+                onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+              >
+                <FaFacebookF />
+              </a>
+              <a 
+                href="https://wa.me/5493388670986" 
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ 
+                  color: '#25D366', 
+                  fontSize: '1.5rem',
+                  transition: 'transform 0.3s ease',
+                  display: 'flex',
+                  alignItems: 'center'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.2)'}
+                onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+              >
+                <FaWhatsapp />
+              </a>
             </div>
           </div>
 
@@ -167,7 +215,7 @@ export default function Footer() {
             alignItems: 'center',
             gap: '0.5rem'
           }}>
-            © 2024 Santa Marta Lodge. Hecho con <Heart size={16} style={{ color: '#F56565' }} /> para nuestros huéspedes.
+            © 202 Santa Marta Lodge. Hecho con <Heart size={16} style={{ color: '#F56565' }} /> para nuestros huéspedes.
           </p>
         </div>
       </div>

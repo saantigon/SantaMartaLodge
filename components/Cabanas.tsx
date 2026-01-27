@@ -1,33 +1,45 @@
-import { Users, Wifi, Car, Coffee } from 'lucide-react'
+import { Users, Wifi, Car, Coffee, Waves, Flame, Wind, Snowflake, UtensilsCrossed } from 'lucide-react'
+import Image from 'next/image'
 
 export default function Cabanas() {
+  // Función para detectar si es un emoji o una ruta de imagen
+  const isEmoji = (str: string) => {
+    // Detecta si el string tiene menos de 5 caracteres y no contiene "/" o "."
+    return str.length < 5 && !str.includes('/') && !str.includes('.')
+  }
+
   const cabanas = [
     {
       id: 1,
       nombre: "Nina",
       capacidad: "2 personas",
       precio: "$95.000/noche",
-      imagen: "🏡",
+      imagen: "/images/cabanas/cabañaFuego.png",
       amenidades: ["WiFi", "Estacionamiento", "Cocina completa", "Pileta", "Parrilla/Asador", "Aire Acondicionado", "Calefacción", "Desayuno"],
-      descripcion: "Perfecta para 2 personas. Equipada para hasta 4 personas."
+      descripcion: "Perfecta para 2 personas. Equipada para hasta 4 personas.",
+      disponible: true
     },
     {
       id: 2,
-      nombre: "Wayra (En preparación)",
+      nombre: "Wayra",
       capacidad: "2 personas",
       precio: "$95.000/noche",
-      imagen: "💕",
+      imagen: "/images/cabanas/cabañaAgua.png",
       amenidades: ["WiFi", "Estacionamiento", "Cocina completa", "Pileta", "Parrilla/Asador", "Aire Acondicionado", "Calefacción", "Desayuno"],
-      descripcion: "Perfecta para 2 personas. Equipada para hasta 4 personas."
+      descripcion: "Perfecta para 2 personas. Equipada para hasta 4 personas.",
+      disponible: false,
+      estado: "En preparación - Próxima a terminarse"
     },
     {
       id: 3,
-      nombre: "Yaku (Proximamente)",
+      nombre: "Yaku",
       capacidad: "2 personas",
       precio: "$95.000/noche",
-      imagen: "🏔️",
+      imagen: "/images/cabanas/cabañaTierra.png",
       amenidades: ["WiFi", "Estacionamiento", "Cocina completa", "Pileta", "Parrilla/Asador", "Aire Acondicionado", "Calefacción", "Desayuno"],
-      descripcion: "Perfecta para 2 personas. Equipada para hasta 4 personas."
+      descripcion: "Perfecta para 2 personas. Equipada para hasta 4 personas.",
+      disponible: false,
+      estado: "Próximamente - En construcción"
     }
   ]
 
@@ -36,6 +48,11 @@ export default function Cabanas() {
       case 'WiFi': return <Wifi size={16} />
       case 'Estacionamiento': return <Car size={16} />
       case 'Cocina completa': return <Coffee size={16} />
+      case 'Pileta': return <Waves size={16} />
+      case 'Parrilla/Asador': return <Flame size={16} />
+      case 'Aire Acondicionado': return <Wind size={16} />
+      case 'Calefacción': return <Snowflake size={16} />
+      case 'Desayuno': return <UtensilsCrossed size={16} />
       default: return <Users size={16} />
     }
   }
@@ -50,13 +67,57 @@ export default function Cabanas() {
           gap: '2rem'
         }}>
           {cabanas.map((cabana) => (
-            <div key={cabana.id} className="card">
+            <div key={cabana.id} className="card" style={{
+              opacity: cabana.disponible ? 1 : 0.85,
+              position: 'relative',
+              border: cabana.disponible ? 'none' : '2px solid #f59e0b'
+            }}>
+              {!cabana.disponible && (
+                <div style={{
+                  position: 'absolute',
+                  top: '1rem',
+                  right: '1rem',
+                  background: cabana.id === 2 ? '#f59e0b' : '#94a3b8',
+                  color: 'white',
+                  padding: '0.25rem 0.75rem',
+                  borderRadius: '1rem',
+                  fontSize: '0.75rem',
+                  fontWeight: '600',
+                  zIndex: 10
+                }}>
+                  {cabana.id === 2 ? '🔨 Casi lista' : '🚧 En construcción'}
+                </div>
+              )}
               <div style={{
-                fontSize: '4rem',
                 textAlign: 'center',
-                marginBottom: '1rem'
+                marginBottom: '1rem',
+                filter: cabana.disponible ? 'none' : 'grayscale(20%)',
+                position: 'relative',
+                width: '100%',
+                height: isEmoji(cabana.imagen) ? 'auto' : '150px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
               }}>
-                {cabana.imagen}
+                {isEmoji(cabana.imagen) ? (
+                  <div style={{ fontSize: '4rem' }}>
+                    {cabana.imagen}
+                  </div>
+                ) : (
+                  <Image
+                    src={cabana.imagen}
+                    alt={`Cabaña ${cabana.nombre}`}
+                    width={120}
+                    height={120}
+                    style={{ 
+                      objectFit: 'contain',
+                      width: 'auto',
+                      height: 'auto',
+                      maxWidth: '120px',
+                      maxHeight: '120px'
+                    }}
+                  />
+                )}
               </div>
               <h3 style={{
                 fontSize: '1.5rem',
@@ -66,6 +127,17 @@ export default function Cabanas() {
               }}>
                 {cabana.nombre}
               </h3>
+              {!cabana.disponible && (
+                <p style={{
+                  textAlign: 'center',
+                  fontSize: '0.85rem',
+                  color: cabana.id === 2 ? '#f59e0b' : '#64748b',
+                  fontWeight: '600',
+                  marginBottom: '0.5rem'
+                }}>
+                  {cabana.estado}
+                </p>
+              )}
               <p style={{
                 color: 'var(--text-secondary)',
                 textAlign: 'center',
@@ -113,8 +185,19 @@ export default function Cabanas() {
                   ))}
                 </div>
               </div>
-              <a href="https://wa.me/5493388670986?text=Hola! Me interesa la Cabaña Familiar. ¿Podrían darme más información?" target="_blank" className="btn btn-primary" style={{ width: '100%', textAlign: 'center', display: 'block' }}>
-                Consultar por WhatsApp
+              <a 
+                href={`https://wa.me/5493388670986?text=Hola! Me interesa la Cabaña ${cabana.nombre}. ¿Podrían darme más información?`}
+                target="_blank" 
+                className="btn btn-primary" 
+                style={{ 
+                  width: '100%', 
+                  textAlign: 'center', 
+                  display: 'block',
+                  opacity: cabana.disponible ? 1 : 0.7,
+                  background: cabana.disponible ? 'var(--primary-color)' : '#94a3b8'
+                }}
+              >
+                {cabana.disponible ? 'Consultar por WhatsApp' : 'Consultar disponibilidad'}
               </a>
             </div>
           ))}

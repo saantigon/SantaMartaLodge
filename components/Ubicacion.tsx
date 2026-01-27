@@ -116,6 +116,7 @@ export default function Ubicacion() {
               gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
               gap: '1rem'
             }}>
+              {/* inicio cerro */}
               <div style={{ textAlign: 'center', padding: '1rem' }}>
                 <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🏔️</div>
                 <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
@@ -125,33 +126,8 @@ export default function Ubicacion() {
                   Acceso Los Molles
                 </p>
               </div>
-              <div style={{ textAlign: 'center', padding: '1rem' }}>
-                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>💧</div>
-                <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
-                  Balneario Guasmara
-                </h5>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                  5 min en auto
-                </p>
-              </div>
-              <div style={{ textAlign: 'center', padding: '1rem' }}>
-                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🥾</div>
-                <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
-                  Red de Senderos
-                </h5>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                  Cercanía a distintos accesos
-                </p>
-              </div>
-              <div style={{ textAlign: 'center', padding: '1rem' }}>
-                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🌊</div>
-                <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
-                  Dique La Viña
-                </h5>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                  20 min en auto
-                </p>
-              </div>
+              {/* fin cerro */}
+              {/* inicio feria */}
               <div style={{ textAlign: 'center', padding: '1rem' }}>
                 <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🎨</div>
                 <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
@@ -161,6 +137,19 @@ export default function Ubicacion() {
                   En el pueblo
                 </p>
               </div> 
+              {/* fin feria */}
+              {/* inicio senderos */}
+              <div style={{ textAlign: 'center', padding: '1rem' }}>
+                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🥾</div>
+                <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
+                  Red de Senderos
+                </h5>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
+                  Cercanía a distintos accesos
+                </p>
+              </div>
+              {/* fin senderos */}
+              {/* inicio bodegas */}
               <div style={{ textAlign: 'center', padding: '1rem' }}>
                 <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🍷</div>
                 <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
@@ -170,6 +159,29 @@ export default function Ubicacion() {
                   Zona cercana
                 </p>
               </div>
+              {/* fin bodegas */}
+              {/* inicio dique */}
+              <div style={{ textAlign: 'center', padding: '1rem' }}>
+                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🌊</div>
+                <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
+                  Dique La Viña
+                </h5>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
+                  20 min en auto
+                </p>
+              </div>
+              {/* fin dique */} 
+              {/* inicio balneario */}
+              <div style={{ textAlign: 'center', padding: '1rem' }}>
+                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>💧</div>
+                <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
+                  Balneario Guasmara
+                </h5>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
+                  5 min en auto
+                </p>
+              </div>
+              {/* fin balneario */}                           
             </div>
           </div>
         </div>

@@ -1,4 +1,7 @@
+'use client'
+
 import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react'
+import { FaWhatsapp, FaInstagram, FaFacebookF, FaCalendarCheck } from 'react-icons/fa'
 
 export default function Contacto() {
   const contactos = [
@@ -19,10 +22,10 @@ export default function Contacto() {
   ]
 
   const redesSociales = [
-    { nombre: "WhatsApp", icono: "💬", enlace: "https://wa.me/5493388670986?text=Hola! Quiero hacer una consulta sobre Santa Marta Lodge" },
-    { nombre: "Instagram", icono: "📷", enlace: "#" },
-    { nombre: "Facebook", icono: "📘", enlace: "#" },
-    { nombre: "Booking", icono: "📘", enlace: "#" }
+    { nombre: "WhatsApp", url: "https://wa.me/5493388670986?text=Hola! Quiero hacer una consulta sobre Santa Marta Lodge", icon: <FaWhatsapp size={24} />, color: '#25D366' },
+    { nombre: "Instagram", url: "https://instagram.com", icon: <FaInstagram size={24} />, color: '#E4405F' },
+    { nombre: "Facebook", url: "https://facebook.com", icon: <FaFacebookF size={24} />, color: '#1877F2' },
+    { nombre: "Booking", url: "https://booking.com", icon: <FaCalendarCheck size={24} />, color: '#003580' }
   ]
 
   return (
@@ -112,22 +115,35 @@ export default function Contacto() {
             {redesSociales.map((red, index) => (
               <a
                 key={index}
-                href={red.enlace}
+                href={red.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '0.5rem',
-                  padding: '0.75rem 1rem',
+                  gap: '0.75rem',
+                  padding: '0.75rem 1.25rem',
                   background: 'var(--secondary-color)',
                   borderRadius: '0.5rem',
                   textDecoration: 'none',
                   color: 'var(--text-primary)',
                   fontWeight: '500',
-                  transition: 'transform 0.3s ease'
+                  transition: 'all 0.3s ease',
+                  border: `2px solid transparent`
                 }}
                 className="social-link"
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = red.color
+                  e.currentTarget.style.transform = 'translateY(-2px)'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = 'transparent'
+                  e.currentTarget.style.transform = 'translateY(0)'
+                }}
               >
-                <span style={{ fontSize: '1.2rem' }}>{red.icono}</span>
+                <span style={{ color: red.color, display: 'flex', alignItems: 'center' }}>
+                  {red.icon}
+                </span>
                 {red.nombre}
               </a>
             ))}

@@ -7,10 +7,11 @@ export default function Header() {
 
   const menuItems = [
     { href: '#cabanas', label: 'Cabañas' },
-    { href: '#sobre-nosotros', label: 'Sobre Nosotros' },
+    { href: '#sobre-nosotros', label: 'Sobre nosotros' },
     { href: '#galeria', label: 'Galería' },
     { href: '#ubicacion', label: 'Ubicación' },
-    { href: '#faq', label: 'FAQ' },
+    { href: '#opiniones', label: 'Opiniones' },
+    { href: '#faq', label: 'Preguntas frecuentes' },
     { href: '#contacto', label: 'Contacto' }
   ]
 
