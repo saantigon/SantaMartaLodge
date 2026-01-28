@@ -22,7 +22,7 @@ export default function SobreNosotros() {
   return (
     <section id="sobre-nosotros" className="section" style={{ background: 'var(--white)' }}>
       <div className="container">
-        <h2 className="section-title">Sobre Nosotros</h2>
+        <h2 className="section-title">Sobre nosotros</h2>
         <div style={{
           display: 'grid',
           gridTemplateColumns: '1fr',
@@ -42,7 +42,7 @@ export default function SobreNosotros() {
                 marginBottom: '1rem',
                 color: 'var(--text-primary)'
               }}>
-                Nuestra Historia
+                Nuestra historia
               </h3>
               <p style={{
                 color: 'var(--text-secondary)',
@@ -59,17 +59,28 @@ export default function SobreNosotros() {
                 lineHeight: '1.8',
                 marginBottom: '1rem'
               }}>
-                Rodeados de arroyos cristalinos, senderos señalizados y la majestuosidad de las 
-                Sierras de Córdoba, ofrecemos el equilibrio perfecto entre comodidad y conexión 
-                con la naturaleza. Un destino ideal para quienes buscan slow travel, ecoturismo, 
-                y experiencias auténticas en las sierras; y, sobre todo, tranquilidad y paz.
+                Rodeados de arroyos cristalinos, senderos señalizados y la majestuosidad de las Sierras de Córdoba, 
+                ofrecemos el equilibrio perfecto entre comodidad y conexión con la naturaleza. 
+                Un destino ideal para quienes buscan slow travel, ecoturismo, y experiencias auténticas 
+                en las sierras; y, sobre todo, tranquilidad y paz.
+              </p>
+              <p style={{
+                color: 'var(--text-secondary)',
+                lineHeight: '1.8',
+                marginBottom: '1rem'
+              }}>
+                Surgido de un deseo personal, el lugar está pensado para brindar al huésped una experiencia 
+                distendida en un espacio que conjuga hermosas vistas, naturaleza y descanso.
               </p>
               <p style={{
                 color: 'var(--text-secondary)',
                 lineHeight: '1.8'
               }}>
-                Surgido de un deseo personal, el lugar está pensado para brindar al huésped una experiencia
-                distendida en un espacio que 
+                La atención es personalizada y cercana: estamos presentes en el lugar para acompañar cada estadía, 
+                brindar asistencia cuando se necesita y compartir recomendaciones para descubrir el entorno desde una mirada local. 
+                Creemos que los pequeños detalles hacen la diferencia, por eso cuidamos cada experiencia con dedicación y calidez, 
+                respetando siempre los tiempos y la privacidad de quienes nos visitan. 
+                Nuestro objetivo es que cada huésped se sienta cómodo, contenido y verdaderamente bienvenido, como en casa.
               </p>
             </div>
 

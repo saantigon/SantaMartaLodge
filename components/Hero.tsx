@@ -1,55 +1,58 @@
+import Image from 'next/image'
+
 export default function Hero() {
   return (
     <section style={{
-      background: 'linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%)',
+      background: 'var(--white)',
       minHeight: '100vh',
       display: 'flex',
-      alignItems: 'center',
+      flexDirection: 'column',
       paddingTop: '80px',
-      position: 'relative',
-      overflow: 'hidden'
+      position: 'relative'
     }}>
-      {/* Imágenes flotantes de fondo */}
+      {/* Imagen panorámica */}
       <div style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
+        position: 'relative',
         width: '100%',
-        height: '100%',
-        pointerEvents: 'none',
-        zIndex: 1
+        height: '50vh',
+        minHeight: '400px',
+        overflow: 'hidden'
       }}>
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((i) => (
-          <div
-            key={i}
-            style={{
-              position: 'absolute',
-              width: '80px',
-              height: '80px',
-              background: 'rgba(255, 255, 255, 0.1)',
-              borderRadius: '50%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '2rem',
-              animation: `float${i} ${8 + i * 2}s ease-in-out infinite`,
-              top: `${Math.random() * 80}%`,
-              left: `${Math.random() * 90}%`
-            }}
-          >
-            {i % 2 === 0 ? '🏡' : '🌲'}
-          </div>
-        ))}
-      </div>
-      <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+        <Image
+          src="/images/hero/cerro-panoramico.jpg"
+          alt="Vista panorámica del Cerro Champaquí"
+          fill
+          priority
+          style={{
+            objectFit: 'cover',
+            objectPosition: 'center'
+          }}
+        />
+        {/* Overlay sutil para mejorar legibilidad */}
         <div style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr',
-          gap: '3rem',
-          alignItems: 'center',
-          textAlign: 'center'
-        }}>
-          <div>
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: '100px',
+          background: 'linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.3))',
+          zIndex: 1
+        }} />
+      </div>
+
+      {/* Contenido del Hero */}
+      <div style={{
+        flex: 1,
+        display: 'flex',
+        alignItems: 'center',
+        background: 'linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%)',
+        position: 'relative',
+        padding: '3rem 0'
+      }}>
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+          <div style={{
+            textAlign: 'center'
+          }}>
             <h1 style={{
               fontSize: 'clamp(2rem, 5vw, 3.5rem)',
               fontWeight: 'bold',
@@ -65,8 +68,7 @@ export default function Hero() {
               maxWidth: '600px',
               margin: '0 auto 2rem'
             }}>
-              En el corazón del Valle de Traslasierra, al pie del Cerro Champaquí. 
-              Tu refugio perfecto para desconectar, explorar senderos y vivir la naturaleza serrana.
+              En el corazón del Valle de Traslasierra, al pie del Cerro Champaquí, se encuentra tu refugio perfecto para desconectar, explorar senderos y vivir la naturaleza serrana.
             </p>
             <div style={{
               display: 'flex',

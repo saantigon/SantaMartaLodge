@@ -4,7 +4,7 @@ export default function Ubicacion() {
   return (
     <section id="ubicacion" className="section" style={{ background: 'var(--neutral-light)' }}>
       <div className="container">
-        <h2 className="section-title">Nuestra Ubicación</h2>
+        <h2 className="section-title">Nuestra ubicación</h2>
         <div style={{
           display: 'grid',
           gridTemplateColumns: '1fr',
@@ -62,7 +62,7 @@ export default function Ubicacion() {
               }}>
                 <Car size={24} style={{ color: 'var(--text-primary)' }} />
                 <h4 style={{ color: 'var(--text-primary)', fontSize: '1.1rem' }}>
-                  Cómo Llegar
+                  Cómo llegar
                 </h4>
               </div>
               <ul style={{
@@ -91,8 +91,8 @@ export default function Ubicacion() {
                 </h4>
               </div>
               <div style={{ color: 'var(--text-secondary)', lineHeight: '1.8' }}>
-                <p><strong>Check-in:</strong> Desde las 13:00</p>
-                <p><strong>Check-out:</strong> Hasta las 10:00</p>
+                <p><strong>Check-in:</strong> Desde las 13:00 hs</p>
+                <p><strong>Check-out:</strong> Hasta las 10:00 hs</p>
                 <p><strong>Recepción:</strong> 24 horas</p>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: '0.25rem', fontStyle: 'italic' }}>
                 Tanto el horario de check-in como el de check-out podrán ser modificados con antelación.
@@ -131,7 +131,7 @@ export default function Ubicacion() {
               <div style={{ textAlign: 'center', padding: '1rem' }}>
                 <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🎨</div>
                 <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
-                  Feria Artesanal
+                  Feria artesanal
                 </h5>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
                   En el pueblo
@@ -142,7 +142,7 @@ export default function Ubicacion() {
               <div style={{ textAlign: 'center', padding: '1rem' }}>
                 <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🥾</div>
                 <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
-                  Red de Senderos
+                  Red de senderos
                 </h5>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
                   Cercanía a distintos accesos
@@ -153,7 +153,7 @@ export default function Ubicacion() {
               <div style={{ textAlign: 'center', padding: '1rem' }}>
                 <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🍷</div>
                 <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
-                  Bodegas y Viñedos
+                  Bodegas y viñedos
                 </h5>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
                   Zona cercana

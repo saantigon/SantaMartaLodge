@@ -66,24 +66,6 @@ export default function Opiniones() {
               <Mail size={20} />
               Enviar por Email
             </a>
-            
-            <a
-              href="https://wa.me/5493388670986?text=Hola! Quiero dejarles mi opinión sobre mi estadía en Santa Marta Lodge"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-secondary"
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-                background: '#25D366',
-                color: 'white',
-                padding: '0.75rem 1.5rem'
-              }}
-            >
-              <MessageCircle size={20} />
-              WhatsApp
-            </a>
           </div>
         </div>
       </div>

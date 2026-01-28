@@ -1,7 +1,7 @@
 'use client'
 
 import { Heart, MapPin, Phone, Mail } from 'lucide-react'
-import { FaWhatsapp, FaInstagram, FaFacebookF } from 'react-icons/fa'
+import { FaWhatsapp, FaInstagram, FaFacebookF, FaCalendarCheck } from 'react-icons/fa'
 
 export default function Footer() {
   return (
@@ -42,7 +42,7 @@ export default function Footer() {
               gap: '1rem'
             }}>
               <a 
-                href="https://instagram.com" 
+                href="https://instagram.com/santamartalodge" 
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ 
@@ -88,6 +88,22 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
               >
                 <FaWhatsapp />
+              </a>
+              <a 
+                href="https://booking.com" 
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ 
+                  color: '#003580', 
+                  fontSize: '1.5rem',
+                  transition: 'transform 0.3s ease',
+                  display: 'flex',
+                  alignItems: 'center'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.2)'}
+                onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+              >
+                <FaCalendarCheck />
               </a>
             </div>
           </div>
@@ -157,7 +173,7 @@ export default function Footer() {
               }}>
                 <Phone size={16} />
                 <span style={{ fontSize: '0.9rem' }}>
-                  +54 9 3388 67-0986
+                  +54 9 3388 670986
                 </span>
               </div>
               <div style={{
@@ -168,7 +184,7 @@ export default function Footer() {
               }}>
                 <Mail size={16} />
                 <span style={{ fontSize: '0.9rem' }}>
-                  reservas@santamarta.com
+                  santamartalodgevdlr@gmail.com
                 </span>
               </div>
             </div>
@@ -185,13 +201,13 @@ export default function Footer() {
             </h4>
             <div style={{ color: '#CBD5E0', fontSize: '0.9rem' }}>
               <p style={{ marginBottom: '0.5rem' }}>
-                <strong>Check-in:</strong> Desde las 13:00
+                <strong>Check-in:</strong> Desde las 13:00 hs
               </p>
               <p style={{ marginBottom: '0.5rem' }}>
-                <strong>Check-out:</strong> Hasta las 10:00
+                <strong>Check-out:</strong> Hasta las 10:00 hs
               </p>
               <p style={{ marginBottom: '0.5rem' }}>
-                <strong>Consultas:</strong> 8:00 - 22:00
+                <strong>Consultas:</strong> 8:00 hs - 22:00 hs
               </p>
             </div>
           </div>
@@ -215,7 +231,7 @@ export default function Footer() {
             alignItems: 'center',
             gap: '0.5rem'
           }}>
-            © 202 Santa Marta Lodge. Hecho con <Heart size={16} style={{ color: '#F56565' }} /> para nuestros huéspedes.
+            © 2026 Santa Marta Lodge. Hecho con <Heart size={16} style={{ color: '#F56565' }} /> para nuestros huéspedes.
           </p>
         </div>
       </div>

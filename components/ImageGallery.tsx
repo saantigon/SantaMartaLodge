@@ -33,7 +33,7 @@ export default function ImageGallery() {
   return (
     <section id="galeria" className="section" style={{ background: 'var(--neutral-light)' }}>
       <div className="container">
-        <h2 className="section-title">Galería de Imágenes</h2>
+        <h2 className="section-title">Galería de imágenes</h2>
         
         <div style={{
           display: 'grid',

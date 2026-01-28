@@ -16,7 +16,7 @@ export default function FAQ() {
     },
     {
       pregunta: "¿Se permiten mascotas?",
-      respuesta: "No, no aceptamos mascotas en todas nuestras cabañas."
+      respuesta: "Por el momento no se admiten mascotas. Buscamos cuidar la tranquilidad del entorno natural y garantizar una experiencia de descanso y bienestar para todos nuestros huéspedes."
     },
     {
       pregunta: "¿Qué incluye el precio de la cabaña?",

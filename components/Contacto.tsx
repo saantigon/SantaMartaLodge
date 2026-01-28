@@ -8,22 +8,22 @@ export default function Contacto() {
     {
       tipo: "Reservas y consultas",
       icono: <Phone size={24} />,
-      principal: "+54 9 3388 67-0986",
+      principal: "+54 9 3388 670986",
       secundario: "WhatsApp disponible",
       horario: "Lun a Dom: 8:00 - 22:00"
     },
     {
       tipo: "Email",
       icono: <Mail size={24} />,
-      principal: "reservas@santamarta.com",
-      secundario: "info@santamarta.com",
+      principal: "santamartalodgevdlr@gmail.com",
+      secundario: "santamartalodgevdlr@gmail.com",
       horario: "Respuesta en 24hs"
     }
   ]
 
   const redesSociales = [
     { nombre: "WhatsApp", url: "https://wa.me/5493388670986?text=Hola! Quiero hacer una consulta sobre Santa Marta Lodge", icon: <FaWhatsapp size={24} />, color: '#25D366' },
-    { nombre: "Instagram", url: "https://instagram.com", icon: <FaInstagram size={24} />, color: '#E4405F' },
+    { nombre: "Instagram", url: "https://instagram.com/santamartalodge", icon: <FaInstagram size={24} />, color: '#E4405F' },
     { nombre: "Facebook", url: "https://facebook.com", icon: <FaFacebookF size={24} />, color: '#1877F2' },
     { nombre: "Booking", url: "https://booking.com", icon: <FaCalendarCheck size={24} />, color: '#003580' }
   ]

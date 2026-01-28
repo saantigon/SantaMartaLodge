@@ -60,7 +60,7 @@ export default function Cabanas() {
   return (
     <section id="cabanas" className="section" style={{ background: 'var(--neutral-light)' }}>
       <div className="container">
-        <h2 className="section-title">Nuestras Cabañas</h2>
+        <h2 className="section-title">Nuestras cabañas</h2>
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
@@ -185,20 +185,35 @@ export default function Cabanas() {
                   ))}
                 </div>
               </div>
-              <a 
-                href={`https://wa.me/5493388670986?text=Hola! Me interesa la Cabaña ${cabana.nombre}. ¿Podrían darme más información?`}
-                target="_blank" 
-                className="btn btn-primary" 
-                style={{ 
-                  width: '100%', 
-                  textAlign: 'center', 
-                  display: 'block',
-                  opacity: cabana.disponible ? 1 : 0.7,
-                  background: cabana.disponible ? 'var(--primary-color)' : '#94a3b8'
-                }}
-              >
-                {cabana.disponible ? 'Consultar por WhatsApp' : 'Consultar disponibilidad'}
-              </a>
+              {cabana.disponible ? (
+                <a 
+                  href={`https://wa.me/5493388670986?text=Hola! Me interesa la Cabaña ${cabana.nombre}. ¿Podrían darme más información?`}
+                  target="_blank" 
+                  className="btn btn-primary" 
+                  style={{ 
+                    width: '100%', 
+                    textAlign: 'center', 
+                    display: 'block'
+                  }}
+                >
+                  Consultar por WhatsApp
+                </a>
+              ) : (
+                <button 
+                  disabled
+                  className="btn btn-primary" 
+                  style={{ 
+                    width: '100%', 
+                    textAlign: 'center', 
+                    display: 'block',
+                    opacity: 0.5,
+                    background: '#94a3b8',
+                    cursor: 'not-allowed'
+                  }}
+                >
+                  {cabana.id === 2 ? 'Próximamente disponible' : 'En construcción'}
+                </button>
+              )}
             </div>
           ))}
         </div>
