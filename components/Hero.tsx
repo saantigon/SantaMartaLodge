@@ -19,10 +19,12 @@ export default function Hero() {
         overflow: 'hidden'
       }}>
         <Image
-          src="/images/hero/cerro-panoramico.jpg"
+          src="/images/hero/cerro-panoramico-3.png"
           alt="Vista panorámica del Cerro Champaquí"
           fill
           priority
+          quality={90}
+          sizes="100vw"
           style={{
             objectFit: 'cover',
             objectPosition: 'center'
@@ -54,15 +56,16 @@ export default function Hero() {
             textAlign: 'center'
           }}>
             <h1 style={{
-              fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+              fontSize: 'clamp(2.5rem, 6vw, 4.6875rem)',
               fontWeight: 'bold',
-              marginBottom: '1.5rem',
-              color: 'var(--text-primary)'
+              marginBottom: '0',
+              color: 'var(--text-primary)',
+              fontFamily: "'Spring LP', 'Brush Script MT', cursive"
             }}>
               Bienvenido a Santa Marta Lodge
             </h1>
             <p style={{
-              fontSize: '1.25rem',
+              fontSize: '1.375rem',
               marginBottom: '2rem',
               color: 'var(--text-secondary)',
               maxWidth: '600px',
