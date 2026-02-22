@@ -14,20 +14,22 @@ export default function Hero() {
       <div style={{
         position: 'relative',
         width: '100%',
-        height: '50vh',
+        height: '60vh',
         minHeight: '400px',
         overflow: 'hidden'
       }}>
         <Image
-          src="/images/hero/cerro-panoramico-3.png"
+          src="/images/hero/cerro-panoramico-recorte22.jpg"
           alt="Vista panorámica del Cerro Champaquí"
-          fill
+          width={2560}
+          height={1280}
           priority
           quality={90}
-          sizes="100vw"
           style={{
+            width: '100%',
+            height: '100%',
             objectFit: 'cover',
-            objectPosition: 'center'
+            objectPosition: 'center 70%'
           }}
         />
         {/* Overlay sutil para mejorar legibilidad */}
@@ -47,42 +49,71 @@ export default function Hero() {
         flex: 1,
         display: 'flex',
         alignItems: 'center',
-        background: 'linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%)',
+        background: '#E2BB92',
         position: 'relative',
-        padding: '3rem 0'
+        padding: '1.5rem 0'
       }}>
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{
-            textAlign: 'center'
+            textAlign: 'center',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '0'
           }}>
-            <h1 style={{
-              fontSize: 'clamp(2.5rem, 6vw, 4.6875rem)',
-              fontWeight: 'bold',
-              marginBottom: '0',
-              color: 'var(--text-primary)',
-              fontFamily: "'Spring LP', 'Brush Script MT', cursive"
-            }}>
-              Bienvenido a Santa Marta Lodge
-            </h1>
-            <p style={{
-              fontSize: '1.375rem',
-              marginBottom: '2rem',
-              color: 'var(--text-secondary)',
-              maxWidth: '600px',
-              margin: '0 auto 2rem'
-            }}>
-              En el corazón del Valle de Traslasierra, al pie del Cerro Champaquí, se encuentra tu refugio perfecto para desconectar, explorar senderos y vivir la naturaleza serrana.
-            </p>
+            {/* Título */}
+            <div style={{ marginBottom: '0' }}>
+              <h1 style={{
+                fontSize: 'clamp(2.5rem, 6vw, 4.6875rem)',
+                fontWeight: 'bold',
+                margin: '0',
+                color: 'var(--text-primary)',
+                fontFamily: "'Spring LP', 'Brush Script MT', cursive",
+                lineHeight: '1'
+              }}>
+                Bienvenido a Santa Marta Lodge
+              </h1>
+            </div>
+
+            {/* Párrafo */}
+            <div style={{ marginBottom: '1rem' }}>
+              <p style={{
+                fontSize: '1.375rem',
+                color: 'var(--text-secondary)',
+                maxWidth: '850px',
+                margin: '0',
+                lineHeight: '1.2'
+              }}>
+                En el corazón del Valle de Traslasierra, al pie del Cerro Champaquí, se encuentra tu refugio perfecto para desconectar, explorar senderos y vivir la naturaleza serrana.
+              </p>
+            </div>
+
+            {/* Botones */}
             <div style={{
               display: 'flex',
               gap: '1rem',
               justifyContent: 'center',
               flexWrap: 'wrap'
             }}>
-              <a href="https://wa.me/5493388670986?text=Hola! Quiero hacer una consulta sobre las cabañas Santa Marta Lodge" target="_blank" className="btn btn-primary">
+              <a 
+                href="https://wa.me/5493388670986?text=Hola! Quiero hacer una consulta sobre las cabañas Santa Marta Lodge" 
+                target="_blank" 
+                className="btn"
+                style={{
+                  background: '#A94B17',
+                  color: '#F4EFEA'
+                }}
+              >
                 Consultar por WhatsApp
               </a>
-              <a href="#cabanas" className="btn btn-secondary">
+              <a 
+                href="#cabanas" 
+                className="btn"
+                style={{
+                  background: '#A94B17',
+                  color: '#F4EFEA'
+                }}
+              >
                 Ver Cabañas
               </a>
             </div>

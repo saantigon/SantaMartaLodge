@@ -22,7 +22,8 @@ export default function Header() {
       position: 'fixed',
       top: 0,
       width: '100%',
-      zIndex: 1000
+      zIndex: 1000,
+      backgroundColor: '#F4EFEA'
     }}>
       <div className="container" style={{ 
         display: 'flex', 
