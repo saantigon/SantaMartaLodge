@@ -11,7 +11,7 @@ export default function Cabanas() {
   const cabanas = [
     {
       id: 1,
-      nombre: "Nina",
+      nombre: "Pacha",
       capacidad: "2 personas",
       precio: "$95.000/noche",
       imagen: "/images/cabanas/cabañaFuego.png",
@@ -149,7 +149,7 @@ export default function Cabanas() {
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center',
-                marginBottom: '1rem',
+                marginBottom: '0.5rem',
                 padding: '0.5rem',
                 background: 'var(--primary-color)',
                 borderRadius: '0.5rem'
@@ -162,6 +162,15 @@ export default function Cabanas() {
                   {cabana.precio}
                 </span>
               </div>
+              <p style={{ 
+                color: 'var(--text-secondary)', 
+                fontSize: '0.85rem', 
+                marginBottom: '1rem',
+                fontStyle: 'italic',
+                textAlign: 'center'
+              }}>
+                Consultar por promociones
+              </p>
               <div style={{ marginBottom: '1.5rem' }}>
                 <h4 style={{ marginBottom: '0.5rem', fontSize: '0.9rem', fontWeight: '600' }}>
                   Amenidades:
