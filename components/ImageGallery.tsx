@@ -3,6 +3,9 @@ import { useState } from 'react'
 import { ChevronLeft, ChevronRight, X } from 'lucide-react'
 
 export default function ImageGallery() {
+  // Color de fondo del módulo - Cambiar el código HEX aquí
+  const backgroundColor = '#EFE6DC';
+
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
 
   // Placeholder para imágenes - reemplazar con rutas reales
@@ -31,7 +34,7 @@ export default function ImageGallery() {
   }
 
   return (
-    <section id="galeria" className="section" style={{ background: 'var(--neutral-light)' }}>
+    <section id="galeria" className="section" style={{ background: backgroundColor }}>
       <div className="container">
         <h2 className="section-title">Galería de imágenes</h2>
         
@@ -80,8 +83,8 @@ export default function ImageGallery() {
               }}>
                 <span style={{ 
                   fontSize: '0.8rem',
-                  background: 'var(--secondary-color)',
-                  color: 'var(--text-primary)',
+                  background: '#A94B17',
+                  color: '#FFFFFF',
                   padding: '0.25rem 0.5rem',
                   borderRadius: '0.25rem'
                 }}>
@@ -161,7 +164,7 @@ export default function ImageGallery() {
                 }}
               />
               <div style={{
-                background: 'var(--white)',
+                background: '#EFE6DC',
                 padding: '1rem',
                 borderRadius: '0.5rem',
                 marginTop: '1rem'
@@ -170,8 +173,8 @@ export default function ImageGallery() {
                   {images[selectedImage].alt}
                 </h3>
                 <span style={{
-                  background: 'var(--secondary-color)',
-                  color: 'var(--text-primary)',
+                  background: '#A94B17',
+                  color: '#FFFFFF',
                   padding: '0.25rem 0.5rem',
                   borderRadius: '0.25rem',
                   fontSize: '0.9rem'

@@ -1,6 +1,9 @@
 import { Heart, Leaf, Star } from 'lucide-react'
 
 export default function SobreNosotros() {
+  // Color de fondo del módulo - Cambiar el código HEX aquí
+  const backgroundColor = '#E2BB92';
+
   const valores = [
     {
       icono: <Heart size={32} />,
@@ -20,7 +23,7 @@ export default function SobreNosotros() {
   ]
 
   return (
-    <section id="sobre-nosotros" className="section" style={{ background: 'var(--white)' }}>
+    <section id="sobre-nosotros" className="section" style={{ background: backgroundColor }}>
       <div className="container">
         <h2 className="section-title">Sobre nosotros</h2>
         <div style={{
@@ -31,21 +34,22 @@ export default function SobreNosotros() {
         }} className="about-grid">
           <div>
             <div style={{
-              background: 'linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%)',
+              background: '#E6E9E4',
               padding: '2rem',
               borderRadius: '1rem',
-              marginBottom: '2rem'
+              marginBottom: '2rem',
+              backgroundColor: '#EFE6DC'
             }}>
               <h3 style={{
                 fontSize: '1.5rem',
                 fontWeight: 'bold',
                 marginBottom: '1rem',
-                color: 'var(--text-primary)'
+                color: '#A94B17'
               }}>
                 Nuestra historia
               </h3>
               <p style={{
-                color: 'var(--text-secondary)',
+                color: '#A94B17',
                 lineHeight: '1.8',
                 marginBottom: '1rem'
               }}>
@@ -55,7 +59,7 @@ export default function SobreNosotros() {
                 esta región ofrece una experiencia única de turismo de naturaleza y aventura.
               </p>
               <p style={{
-                color: 'var(--text-secondary)',
+                color: '#A94B17',
                 lineHeight: '1.8',
                 marginBottom: '1rem'
               }}>
@@ -65,7 +69,7 @@ export default function SobreNosotros() {
                 en las sierras; y, sobre todo, tranquilidad y paz.
               </p>
               <p style={{
-                color: 'var(--text-secondary)',
+                color: '#A94B17',
                 lineHeight: '1.8',
                 marginBottom: '1rem'
               }}>
@@ -73,7 +77,7 @@ export default function SobreNosotros() {
                 distendida en un espacio que conjuga hermosas vistas, naturaleza y descanso.
               </p>
               <p style={{
-                color: 'var(--text-secondary)',
+                color: '#A94B17',
                 lineHeight: '1.8'
               }}>
                 La atención es personalizada y cercana: estamos presentes en el lugar para acompañar cada estadía, 
@@ -93,11 +97,11 @@ export default function SobreNosotros() {
                 <div key={index} style={{
                   textAlign: 'center',
                   padding: '1.5rem',
-                  background: 'var(--primary-color)',
+                  background: '#EFE6DC',
                   borderRadius: '1rem'
                 }}>
                   <div style={{
-                    color: 'var(--text-primary)',
+                    color: '#A94B17',
                     marginBottom: '1rem',
                     display: 'flex',
                     justifyContent: 'center'
@@ -108,12 +112,12 @@ export default function SobreNosotros() {
                     fontSize: '1.1rem',
                     fontWeight: 'bold',
                     marginBottom: '0.5rem',
-                    color: 'var(--text-primary)'
+                    color: '#A94B17'
                   }}>
                     {valor.titulo}
                   </h4>
                   <p style={{
-                    color: 'var(--text-secondary)',
+                    color: '#A94B17',
                     fontSize: '0.9rem',
                     lineHeight: '1.6'
                   }}>

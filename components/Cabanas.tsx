@@ -2,6 +2,11 @@ import { Users, Wifi, Car, Coffee, Waves, Flame, Wind, Snowflake, UtensilsCrosse
 import Image from 'next/image'
 
 export default function Cabanas() {
+  // Color de fondo del módulo - Cambiar el código HEX aquí
+  const backgroundColor = '#EFE6DC';
+  // Color de fondo de los recuadros de cabañas - Cambiar el código HEX aquí
+  const cardBackgroundColor = '#F4EFEA';
+
   // Función para detectar si es un emoji o una ruta de imagen
   const isEmoji = (str: string) => {
     // Detecta si el string tiene menos de 5 caracteres y no contiene "/" o "."
@@ -58,16 +63,18 @@ export default function Cabanas() {
   }
 
   return (
-    <section id="cabanas" className="section" style={{ background: 'var(--neutral-light)' }}>
+    <section id="cabanas" className="section" style={{ background: backgroundColor }}>
       <div className="container">
         <h2 className="section-title">Nuestras cabañas</h2>
         <div style={{
           display: 'grid',
+          backgroundColor: '#00000',
           gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
           gap: '2rem'
         }}>
           {cabanas.map((cabana) => (
             <div key={cabana.id} className="card" style={{
+              background: cardBackgroundColor,
               opacity: cabana.disponible ? 1 : 0.85,
               position: 'relative',
               border: cabana.disponible ? 'none' : '2px solid #f59e0b'
@@ -77,7 +84,7 @@ export default function Cabanas() {
                   position: 'absolute',
                   top: '1rem',
                   right: '1rem',
-                  background: cabana.id === 2 ? '#f59e0b' : '#94a3b8',
+                  background: cabana.id === 2 ? '#f59e0b' : '#CCCCCC',
                   color: 'white',
                   padding: '0.25rem 0.75rem',
                   borderRadius: '1rem',
@@ -152,7 +159,8 @@ export default function Cabanas() {
                 marginBottom: '0.5rem',
                 padding: '0.5rem',
                 background: 'var(--primary-color)',
-                borderRadius: '0.5rem'
+                borderRadius: '0.5rem',
+                backgroundColor: '#CCCCCC'
               }}>
                 <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   <Users size={16} />
@@ -202,7 +210,9 @@ export default function Cabanas() {
                   style={{ 
                     width: '100%', 
                     textAlign: 'center', 
-                    display: 'block'
+                    display: 'block',
+                    backgroundColor: '#A94B17',
+                    color: '#FFFFFF'
                   }}
                 >
                   Consultar por WhatsApp
@@ -216,7 +226,7 @@ export default function Cabanas() {
                     textAlign: 'center', 
                     display: 'block',
                     opacity: 0.5,
-                    background: '#94a3b8',
+                    background: '#CCCCCC',
                     cursor: 'not-allowed'
                   }}
                 >

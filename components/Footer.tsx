@@ -6,7 +6,7 @@ import { FaWhatsapp, FaInstagram, FaFacebookF, FaCalendarCheck } from 'react-ico
 export default function Footer() {
   return (
     <footer style={{
-      background: 'linear-gradient(135deg, var(--text-primary) 0%, #1A202C 100%)',
+      background: 'linear-gradient(135deg, var(--text-primary) 0%, #3A3A3A 100%)',
       color: 'var(--white)',
       padding: '3rem 0 1rem'
     }}>

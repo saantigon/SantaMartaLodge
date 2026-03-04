@@ -2,6 +2,9 @@
 import { MessageCircle, Phone, Clock, CheckCircle } from 'lucide-react'
 
 export default function WhatsAppReservas() {
+  // Color de fondo del módulo - Cambiar el código HEX aquí
+  const backgroundColor = '#EFE6DC';
+
   const whatsappNumber = "5493388670986"
   const whatsappLink = `https://wa.me/${whatsappNumber}`
 
@@ -27,7 +30,7 @@ export default function WhatsAppReservas() {
   ]
 
   return (
-    <section id="reservas" className="section" style={{ background: 'var(--white)' }}>
+    <section id="reservas" className="section" style={{ background: backgroundColor }}>
       <div className="container">
         <h2 className="section-title">Reservas por WhatsApp</h2>
         
@@ -54,14 +57,13 @@ export default function WhatsAppReservas() {
               alignItems: 'center',
               gap: '1rem',
               padding: '1rem 2rem',
-              background: '#25D366',
+              background: '#A27760',
               color: 'white',
               textDecoration: 'none',
               borderRadius: '0.5rem',
               fontSize: '1.2rem',
               fontWeight: 'bold',
               transition: 'transform 0.3s ease',
-              boxShadow: '0 4px 15px rgba(37, 211, 102, 0.3)'
             }}
             className="whatsapp-btn"
           >
@@ -78,9 +80,9 @@ export default function WhatsAppReservas() {
           marginBottom: '3rem'
         }}>
           {pasos.map((paso) => (
-            <div key={paso.numero} className="card" style={{ textAlign: 'center' }}>
+            <div key={paso.numero} className="card" style={{ textAlign: 'center', backgroundColor: '#E2BB92' }}>
               <div style={{
-                background: 'var(--primary-color)',
+                background: '#EFE6DC',
                 width: '4rem',
                 height: '4rem',
                 borderRadius: '50%',
@@ -93,8 +95,8 @@ export default function WhatsAppReservas() {
                 {paso.icono}
               </div>
               <div style={{
-                background: 'var(--secondary-color)',
-                color: 'var(--text-primary)',
+                background: '#3A3A3A',
+                color: '#EFECDC',
                 width: '2rem',
                 height: '2rem',
                 borderRadius: '50%',
@@ -131,7 +133,7 @@ export default function WhatsAppReservas() {
           gap: '1.5rem'
         }}>
           <div style={{
-            background: 'var(--success-color)',
+            background: '#CCCCCC',
             padding: '1.5rem',
             borderRadius: '1rem',
             textAlign: 'center'
@@ -146,7 +148,7 @@ export default function WhatsAppReservas() {
           </div>
 
           <div style={{
-            background: 'var(--accent-color)',
+            background: '#CCCCCC',
             padding: '1.5rem',
             borderRadius: '1rem',
             textAlign: 'center'
@@ -161,7 +163,7 @@ export default function WhatsAppReservas() {
           </div>
 
           <div style={{
-            background: 'var(--primary-color)',
+            background: '#CCCCCC',
             padding: '1.5rem',
             borderRadius: '1rem',
             textAlign: 'center'
@@ -180,7 +182,7 @@ export default function WhatsAppReservas() {
         <div style={{
           marginTop: '3rem',
           textAlign: 'center',
-          background: 'var(--neutral-light)',
+          background: '#E2BB92',
           padding: '2rem',
           borderRadius: '1rem'
         }}>

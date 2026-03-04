@@ -4,26 +4,28 @@ import { Star, Mail, MessageCircle } from 'lucide-react'
 import { FaGoogle } from 'react-icons/fa'
 
 export default function Opiniones() {
+  // Color de fondo del módulo - Cambiar el código HEX aquí
+  const backgroundColor = '#E2BB92';
 
   return (
-    <section id="opiniones" className="section" style={{ background: 'var(--neutral-light)' }}>
+    <section id="opiniones" className="section" style={{ background: backgroundColor }}>
       <div className="container">
         {/* Botones para dejar opinión */}
         <div className="card" style={{
           textAlign: 'center',
           padding: '2rem',
-          background: 'linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%)'
+          background: '#A27760'
         }}>
           <h3 style={{
             fontSize: '1.5rem',
             fontWeight: 'bold',
             marginBottom: '1rem',
-            color: 'var(--text-primary)'
+            color: '#E2BB92'
           }}>
             ¿Ya nos visitaste?
           </h3>
           <p style={{
-            color: 'var(--text-secondary)',
+            color: '#E2BB92',
             marginBottom: '2rem',
             fontSize: '1rem'
           }}>
@@ -45,7 +47,7 @@ export default function Opiniones() {
                 display: 'flex',
                 alignItems: 'center',
                 gap: '0.5rem',
-                background: '#4285F4',
+                background: '#EFE6DC',
                 padding: '0.75rem 1.5rem'
               }}
             >
@@ -60,7 +62,8 @@ export default function Opiniones() {
                 display: 'flex',
                 alignItems: 'center',
                 gap: '0.5rem',
-                padding: '0.75rem 1.5rem'
+                padding: '0.75rem 1.5rem',
+                background: '#EFE6DC',
               }}
             >
               <Mail size={20} />

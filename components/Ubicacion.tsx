@@ -1,8 +1,11 @@
 import { Clock, Car } from 'lucide-react'
 
 export default function Ubicacion() {
+  // Color de fondo del módulo - Cambiar el código HEX aquí
+  const backgroundColor = '#E2BB92';
+
   return (
-    <section id="ubicacion" className="section" style={{ background: 'var(--neutral-light)' }}>
+    <section id="ubicacion" className="section" style={{ background: backgroundColor }}>
       <div className="container">
         <h2 className="section-title">Nuestra ubicación</h2>
         <div style={{
@@ -13,12 +16,12 @@ export default function Ubicacion() {
         }} className="location-grid">
           
           {/* Mapa */}
-          <div className="card">
+          <div className="card" style={{backgroundColor: '#EFE6DC'}}>
             <div style={{
               height: '400px',
               borderRadius: '0.5rem',
               overflow: 'hidden',
-              marginBottom: '1rem'
+              marginBottom: '1rem',
             }}>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3456.789!2d-65.0676!3d-31.9607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzHCsDU3JzM4LjUiUyA2NcKwMDQnMDMuNCJX!5e0!3m2!1ses!2sar!4v1234567890"
@@ -53,7 +56,7 @@ export default function Ubicacion() {
             gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
             gap: '1.5rem'
           }}>
-            <div className="card">
+            <div className="card" style={{backgroundColor: '#EFE6DC'}}>
               <div style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -78,7 +81,7 @@ export default function Ubicacion() {
               </ul>
             </div>
 
-            <div className="card">
+            <div className="card" style={{backgroundColor: '#EFE6DC'}}>
               <div style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -102,7 +105,7 @@ export default function Ubicacion() {
           </div>
 
           {/* Puntos de interés */}
-          <div className="card">
+          <div className="card" style={{backgroundColor: '#EFE6DC'}}>
             <h4 style={{
               color: 'var(--text-primary)',
               fontSize: '1.2rem',

@@ -3,6 +3,9 @@ import { useState } from 'react'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 
 export default function FAQ() {
+  // Color de fondo del módulo - Cambiar el código HEX aquí
+  const backgroundColor = '#E2BB92';
+
   const [openItems, setOpenItems] = useState<number[]>([])
 
   const faqs = [
@@ -41,13 +44,13 @@ export default function FAQ() {
   }
 
   return (
-    <section id="faq" className="section" style={{ background: 'var(--neutral-light)' }}>
+    <section id="faq" className="section" style={{ background: backgroundColor }}>
       <div className="container">
         <h2 className="section-title">Preguntas Frecuentes</h2>
         
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           {faqs.map((faq, index) => (
-            <div key={index} className="card" style={{ marginBottom: '1rem' }}>
+            <div key={index} className="card" style={{ marginBottom: '1rem', backgroundColor: '#EFE6DC' }}>
               <button
                 onClick={() => toggleItem(index)}
                 style={{
@@ -99,7 +102,7 @@ export default function FAQ() {
         <div style={{
           marginTop: '3rem',
           textAlign: 'center',
-          background: 'var(--primary-color)',
+          background: '#A27760',
           padding: '2rem',
           borderRadius: '1rem'
         }}>
@@ -107,17 +110,17 @@ export default function FAQ() {
             fontSize: '1.3rem',
             fontWeight: 'bold',
             marginBottom: '1rem',
-            color: 'var(--text-primary)'
+            color: '#E2BB92'
           }}>
             ¿No encontraste lo que buscabas?
           </h3>
           <p style={{
-            color: 'var(--text-secondary)',
+            color: '#E2BB92',
             marginBottom: '1.5rem'
           }}>
             Estamos acá para ayudarte. Contactanos por WhatsApp y resolveremos todas tus dudas.
           </p>
-          <a href="https://wa.me/5493388670986?text=Hola! Tengo una consulta sobre Santa Marta Lodge" target="_blank" className="btn btn-secondary">
+          <a href="https://wa.me/5493388670986?text=Hola! Tengo una consulta sobre Santa Marta Lodge" target="_blank" className="btn btn-secondary" style={{background: '#EFE6DC'}}>
             Consultar por WhatsApp
           </a>
         </div>

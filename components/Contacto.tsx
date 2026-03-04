@@ -4,6 +4,9 @@ import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react'
 import { FaWhatsapp, FaInstagram, FaFacebookF, FaCalendarCheck } from 'react-icons/fa'
 
 export default function Contacto() {
+  // Color de fondo del módulo - Cambiar el código HEX aquí
+  const backgroundColor = '#EFE6DC';
+
   const contactos = [
     {
       tipo: "Reservas y consultas",
@@ -29,7 +32,7 @@ export default function Contacto() {
   ]
 
   return (
-    <section id="contacto" className="section" style={{ background: 'var(--white)' }}>
+    <section id="contacto" className="section" style={{ background: backgroundColor }}>
       <div className="container">
         <h2 className="section-title">Contactos útiles</h2>
         
@@ -37,28 +40,28 @@ export default function Contacto() {
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
           gap: '2rem',
-          marginBottom: '3rem'
+          marginBottom: '3rem',
         }}>
           {contactos.map((contacto, index) => (
-            <div key={index} className="card">
+            <div key={index} className="card" style={{backgroundColor:'#A27760'}}>
               <div style={{
                 display: 'flex',
                 alignItems: 'center',
                 gap: '1rem',
-                marginBottom: '1rem'
+                marginBottom: '1rem',
               }}>
                 <div style={{
-                  background: 'var(--primary-color)',
+                  background: '#A27760',
                   padding: '0.75rem',
                   borderRadius: '0.5rem',
-                  color: 'var(--text-primary)'
+                  color: '#EFE6DC'
                 }}>
                   {contacto.icono}
                 </div>
                 <h3 style={{
                   fontSize: '1.2rem',
                   fontWeight: 'bold',
-                  color: 'var(--text-primary)',
+                  color: '#EFE6DC',
                   margin: 0
                 }}>
                   {contacto.tipo}
@@ -69,13 +72,13 @@ export default function Contacto() {
                 <p style={{
                   fontSize: '1.1rem',
                   fontWeight: '600',
-                  color: 'var(--text-primary)',
+                  color: '#EFE6DC',
                   marginBottom: '0.25rem'
                 }}>
                   {contacto.principal}
                 </p>
                 <p style={{
-                  color: 'var(--text-secondary)',
+                  color: '#EFE6DC',
                   fontSize: '0.9rem',
                   marginBottom: '0.5rem'
                 }}>
@@ -85,7 +88,7 @@ export default function Contacto() {
                   display: 'flex',
                   alignItems: 'center',
                   gap: '0.5rem',
-                  color: 'var(--text-secondary)',
+                  color: '#EFE6DC',
                   fontSize: '0.85rem'
                 }}>
                   <Clock size={14} />
@@ -97,12 +100,15 @@ export default function Contacto() {
         </div>
 
         {/* Redes sociales */}
-        <div className="card" style={{ textAlign: 'center', marginBottom: '3rem' }}>
+        <div className="card" style={{ 
+          textAlign: 'center', 
+          marginBottom: '3rem',
+          background: '#E2BB92' }}>
           <h3 style={{
             fontSize: '1.3rem',
             fontWeight: 'bold',
             marginBottom: '1.5rem',
-            color: 'var(--text-primary)'
+            color: '#A27760'
           }}>
             Seguinos en redes sociales
           </h3>
@@ -123,10 +129,10 @@ export default function Contacto() {
                   alignItems: 'center',
                   gap: '0.75rem',
                   padding: '0.75rem 1.25rem',
-                  background: 'var(--secondary-color)',
+                  background: '#A27760',
                   borderRadius: '0.5rem',
                   textDecoration: 'none',
-                  color: 'var(--text-primary)',
+                  color: '#EFE6DC',
                   fontWeight: '500',
                   transition: 'all 0.3s ease',
                   border: `2px solid transparent`
@@ -157,7 +163,7 @@ export default function Contacto() {
           gap: '1.5rem'
         }}>
           <div style={{
-            background: 'var(--accent-color)',
+            background: '#CCCCCC',
             padding: '1.5rem',
             borderRadius: '1rem',
             textAlign: 'center'
