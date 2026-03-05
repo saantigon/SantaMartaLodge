@@ -19,7 +19,7 @@ export default function Cabanas() {
       nombre: "Pacha",
       capacidad: "2 personas",
       precio: "$95.000/noche",
-      imagen: "/images/cabanas/cabañaFuego.png",
+      imagen: "/images/cabanas/cabañaTierra.png",
       amenidades: ["WiFi", "Estacionamiento", "Cocina completa", "Pileta", "Parrilla/Asador", "Aire Acondicionado", "Calefacción", "Desayuno"],
       descripcion: "Perfecta para 2 personas. Equipada para hasta 4 personas.",
       disponible: true
@@ -29,7 +29,7 @@ export default function Cabanas() {
       nombre: "Wayra",
       capacidad: "2 personas",
       precio: "$95.000/noche",
-      imagen: "/images/cabanas/cabañaAgua.png",
+      imagen: "/images/cabanas/cabañaAire.png",
       amenidades: ["WiFi", "Estacionamiento", "Cocina completa", "Pileta", "Parrilla/Asador", "Aire Acondicionado", "Calefacción", "Desayuno"],
       descripcion: "Perfecta para 2 personas. Equipada para hasta 4 personas.",
       disponible: false,
@@ -40,7 +40,7 @@ export default function Cabanas() {
       nombre: "Yaku",
       capacidad: "2 personas",
       precio: "$95.000/noche",
-      imagen: "/images/cabanas/cabañaTierra.png",
+      imagen: "/images/cabanas/cabañaAgua.png",
       amenidades: ["WiFi", "Estacionamiento", "Cocina completa", "Pileta", "Parrilla/Asador", "Aire Acondicionado", "Calefacción", "Desayuno"],
       descripcion: "Perfecta para 2 personas. Equipada para hasta 4 personas.",
       disponible: false,
@@ -114,14 +114,12 @@ export default function Cabanas() {
                   <Image
                     src={cabana.imagen}
                     alt={`Cabaña ${cabana.nombre}`}
-                    width={120}
-                    height={120}
+                    width={cabana.id === 1 ? 120 : 140}
+                    height={cabana.id === 1 ? 120 : 140}
                     style={{ 
                       objectFit: 'contain',
-                      width: 'auto',
-                      height: 'auto',
-                      maxWidth: '120px',
-                      maxHeight: '120px'
+                      width: cabana.id === 1 ? '120px' : '140px',
+                      height: cabana.id === 1 ? '120px' : '140px'
                     }}
                   />
                 )}

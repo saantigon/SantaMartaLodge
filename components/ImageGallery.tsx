@@ -7,29 +7,74 @@ export default function ImageGallery() {
   const backgroundColor = '#EFE6DC';
 
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
+  const [selectedCategory, setSelectedCategory] = useState<string>('Todas')
 
-  // Placeholder para imágenes - reemplazar con rutas reales
-  const images = [
-    { src: '/images/gallery/cabaña1.jpg', alt: 'Cabaña Familiar exterior', category: 'Cabañas' },
-    { src: '/images/gallery/cabaña2.jpg', alt: 'Cabaña Romántica', category: 'Cabañas' },
-    { src: '/images/gallery/cabaña3.jpg', alt: 'Cabaña Aventurera', category: 'Cabañas' },
-    { src: '/images/gallery/interior1.jpg', alt: 'Interior acogedor', category: 'Interiores' },
-    { src: '/images/gallery/interior2.jpg', alt: 'Cocina equipada', category: 'Interiores' },
-    { src: '/images/gallery/interior3.jpg', alt: 'Sala de estar', category: 'Interiores' },
-    { src: '/images/gallery/paisaje1.jpg', alt: 'Vista al lago', category: 'Paisajes' },
-    { src: '/images/gallery/paisaje2.jpg', alt: 'Senderos naturales', category: 'Paisajes' },
-    { src: '/images/gallery/actividades1.jpg', alt: 'Kayaks en el lago', category: 'Actividades' }
-  ]
+  // Generar array de imágenes automáticamente
+  const generateImages = () => {
+    const images = [];
+    
+    // Imágenes PACHA (Nina)
+    for (let i = 1; i <= 14; i++) {
+      if ([4, 5].includes(i)) continue; // Saltar números que no existen
+      images.push({
+        src: `/images/gallery/PACHA${i}.jpg`,
+        alt: `Cabaña Nina - Foto ${i}`,
+        category: 'Nina'
+      });
+    }
+    
+    // Imágenes WAYRA
+    for (let i = 1; i <= 5; i++) {
+      images.push({
+        src: `/images/gallery/WAYRA${i}.jpg`,
+        alt: `Cabaña Wayra - Foto ${i}`,
+        category: 'Wayra'
+      });
+    }
+    
+    // Imágenes PARQUE
+    for (let i = 1; i <= 7; i++) {
+      if (i === 4) continue; // Saltar número que no existe
+      images.push({
+        src: `/images/gallery/PARQUE${i}.jpg`,
+        alt: `Parque y Exteriores - Foto ${i}`,
+        category: 'Exteriores'
+      });
+    }
+    
+    // Imágenes PILETA
+    for (let i = 2; i <= 3; i++) {
+      images.push({
+        src: `/images/gallery/PILETA${i}.jpg`,
+        alt: `Pileta - Foto ${i}`,
+        category: 'Pileta'
+      });
+    }
+    
+    return images;
+  };
+
+  const images = generateImages();
+
+  // Obtener categorías únicas
+  const categories = ['Todas', ...Array.from(new Set(images.map(img => img.category)))];
+
+  // Filtrar imágenes por categoría
+  const filteredImages = selectedCategory === 'Todas' 
+    ? images 
+    : images.filter(img => img.category === selectedCategory);
 
   const nextImage = () => {
     if (selectedImage !== null) {
-      setSelectedImage((selectedImage + 1) % images.length)
+      const currentIndex = images.findIndex((_, idx) => idx === selectedImage);
+      setSelectedImage((currentIndex + 1) % images.length);
     }
   }
 
   const prevImage = () => {
     if (selectedImage !== null) {
-      setSelectedImage(selectedImage === 0 ? images.length - 1 : selectedImage - 1)
+      const currentIndex = images.findIndex((_, idx) => idx === selectedImage);
+      setSelectedImage(currentIndex === 0 ? images.length - 1 : currentIndex - 1);
     }
   }
 
@@ -38,55 +83,85 @@ export default function ImageGallery() {
       <div className="container">
         <h2 className="section-title">Galería de imágenes</h2>
         
+        {/* Filtros de categoría */}
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          gap: '1rem',
+          marginBottom: '2rem',
+          flexWrap: 'wrap'
+        }}>
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              style={{
+                padding: '0.5rem 1.5rem',
+                borderRadius: '2rem',
+                border: 'none',
+                background: selectedCategory === category ? '#A94B17' : 'var(--secondary-color)',
+                color: selectedCategory === category ? '#F4EFEA' : 'var(--text-primary)',
+                fontWeight: '600',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+        
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '1rem',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: '1.5rem',
           marginBottom: '2rem'
         }}>
-          {images.map((image, index) => (
+          {filteredImages.map((image, index) => (
             <div
               key={index}
-              onClick={() => setSelectedImage(index)}
+              onClick={() => setSelectedImage(images.findIndex(img => img.src === image.src))}
               style={{
                 position: 'relative',
-                aspectRatio: '4/3',
-                borderRadius: '0.5rem',
-                overflow: 'hidden',
                 cursor: 'pointer',
-                background: 'var(--primary-color)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                transition: 'transform 0.3s ease'
+                paddingBottom: '2.5rem'
               }}
               className="gallery-item"
             >
-              <img
-                src={image.src}
-                alt={image.alt}
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover'
-                }}
-              />
+              <div style={{
+                position: 'relative',
+                aspectRatio: '4/3',
+                overflow: 'hidden',
+                borderRadius: '0.5rem',
+                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+              }}>
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
+                />
+              </div>
               <div style={{
                 position: 'absolute',
-                bottom: 0,
-                left: 0,
-                right: 0,
-                background: 'linear-gradient(transparent, rgba(0,0,0,0.7))',
-                color: 'white',
-                padding: '1rem 0.5rem 0.5rem',
+                bottom: '0',
+                left: '50%',
+                transform: 'translateX(-50%)',
                 textAlign: 'center'
               }}>
                 <span style={{ 
-                  fontSize: '0.8rem',
+                  fontSize: '0.9rem',
                   background: '#A94B17',
-                  color: '#FFFFFF',
-                  padding: '0.25rem 0.5rem',
-                  borderRadius: '0.25rem'
+                  color: '#F4EFEA',
+                  padding: '0.4rem 1rem',
+                  borderRadius: '0.5rem',
+                  fontWeight: '600',
+                  display: 'inline-block',
+                  boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)'
                 }}>
                   {image.category}
                 </span>
@@ -95,22 +170,29 @@ export default function ImageGallery() {
           ))}
         </div>
 
-        {/* Modal para imagen ampliada */}
+        {/* Modal simplificado para imagen ampliada */}
         {selectedImage !== null && (
-          <div style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            background: 'rgba(0, 0, 0, 0.9)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            zIndex: 1000
-          }}>
+          <div 
+            style={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              background: 'rgba(0, 0, 0, 0.9)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              zIndex: 1000,
+              padding: '2rem'
+            }}
+            onClick={() => setSelectedImage(null)}
+          >
             <button
-              onClick={() => setSelectedImage(null)}
+              onClick={(e) => {
+                e.stopPropagation();
+                setSelectedImage(null);
+              }}
               style={{
                 position: 'absolute',
                 top: '1rem',
@@ -123,14 +205,18 @@ export default function ImageGallery() {
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                zIndex: 1001
               }}
             >
               <X size={20} />
             </button>
             
             <button
-              onClick={prevImage}
+              onClick={(e) => {
+                e.stopPropagation();
+                prevImage();
+              }}
               style={{
                 position: 'absolute',
                 left: '1rem',
@@ -142,17 +228,21 @@ export default function ImageGallery() {
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                zIndex: 1001
               }}
             >
               <ChevronLeft size={20} />
             </button>
 
-            <div style={{
-              maxWidth: '90%',
-              maxHeight: '90%',
-              textAlign: 'center'
-            }}>
+            <div 
+              style={{
+                maxWidth: '90%',
+                maxHeight: '90%',
+                textAlign: 'center'
+              }}
+              onClick={(e) => e.stopPropagation()}
+            >
               <img
                 src={images[selectedImage].src}
                 alt={images[selectedImage].alt}
@@ -164,20 +254,16 @@ export default function ImageGallery() {
                 }}
               />
               <div style={{
-                background: '#EFE6DC',
-                padding: '1rem',
-                borderRadius: '0.5rem',
                 marginTop: '1rem'
               }}>
-                <h3 style={{ color: 'var(--text-primary)', marginBottom: '0.5rem' }}>
-                  {images[selectedImage].alt}
-                </h3>
                 <span style={{
                   background: '#A94B17',
-                  color: '#FFFFFF',
-                  padding: '0.25rem 0.5rem',
-                  borderRadius: '0.25rem',
-                  fontSize: '0.9rem'
+                  color: '#F4EFEA',
+                  padding: '0.5rem 1.5rem',
+                  borderRadius: '0.5rem',
+                  fontSize: '1rem',
+                  fontWeight: '600',
+                  display: 'inline-block'
                 }}>
                   {images[selectedImage].category}
                 </span>
@@ -185,7 +271,10 @@ export default function ImageGallery() {
             </div>
 
             <button
-              onClick={nextImage}
+              onClick={(e) => {
+                e.stopPropagation();
+                nextImage();
+              }}
               style={{
                 position: 'absolute',
                 right: '1rem',
@@ -197,7 +286,8 @@ export default function ImageGallery() {
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                zIndex: 1001
               }}
             >
               <ChevronRight size={20} />
@@ -205,8 +295,6 @@ export default function ImageGallery() {
           </div>
         )}
       </div>
-
-
     </section>
   )
 }

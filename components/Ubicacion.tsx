@@ -8,17 +8,12 @@ export default function Ubicacion() {
     <section id="ubicacion" className="section" style={{ background: backgroundColor }}>
       <div className="container">
         <h2 className="section-title">Nuestra ubicación</h2>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr',
-          gap: '3rem',
-          alignItems: 'start'
-        }} className="location-grid">
-          
-          {/* Mapa */}
+        
+        {/* Fila 1: Mapa (más ancho) */}
+        <div style={{ marginBottom: '2rem' }}>
           <div className="card" style={{backgroundColor: '#EFE6DC'}}>
             <div style={{
-              height: '400px',
+              height: '450px',
               borderRadius: '0.5rem',
               overflow: 'hidden',
               marginBottom: '1rem',
@@ -49,142 +44,136 @@ export default function Ubicacion() {
               </p>
             </div>
           </div>
+        </div>
 
-          {/* Información de acceso */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '1.5rem'
-          }}>
-            <div className="card" style={{backgroundColor: '#EFE6DC'}}>
-              <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '1rem',
-                marginBottom: '1rem'
-              }}>
-                <Car size={24} style={{ color: 'var(--text-primary)' }} />
-                <h4 style={{ color: 'var(--text-primary)', fontSize: '1.1rem' }}>
-                  Cómo llegar
-                </h4>
-              </div>
-              <ul style={{
-                listStyle: 'none',
-                color: 'var(--text-secondary)',
-                lineHeight: '1.8'
-              }}>
-                <li>🚗 Desde Córdoba Capital: 3 horas</li>
-                <li>🛣️ Ruta Provincial 14 (asfaltada)</li>
-                <li>🏔️ Valle de Traslasierra</li>
-                <li>🅿️ Estacionamiento gratuito</li>
-                <li>🛬 Desde el Aeropuerto Internacional Valle del Conlara: 1 hora</li>
-              </ul>
+        {/* Fila 2: Cómo llegar y Horarios */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: '2rem',
+          marginBottom: '2rem'
+        }}>
+          <div className="card" style={{backgroundColor: '#EFE6DC'}}>
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '1rem',
+              marginBottom: '1rem'
+            }}>
+              <Car size={24} style={{ color: 'var(--text-primary)' }} />
+              <h4 style={{ color: 'var(--text-primary)', fontSize: '1.1rem' }}>
+                Cómo llegar
+              </h4>
             </div>
-
-            <div className="card" style={{backgroundColor: '#EFE6DC'}}>
-              <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '1rem',
-                marginBottom: '1rem'
-              }}>
-                <Clock size={24} style={{ color: 'var(--text-primary)' }} />
-                <h4 style={{ color: 'var(--text-primary)', fontSize: '1.1rem' }}>
-                  Horarios
-                </h4>
-              </div>
-              <div style={{ color: 'var(--text-secondary)', lineHeight: '1.8' }}>
-                <p><strong>Check-in:</strong> Desde las 13:00 hs</p>
-                <p><strong>Check-out:</strong> Hasta las 10:00 hs</p>
-                <p><strong>Recepción:</strong> 24 horas</p>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: '0.25rem', fontStyle: 'italic' }}>
-                Tanto el horario de check-in como el de check-out podrán ser modificados con antelación.
-              </p>
-              </div>
-            </div>
+            <ul style={{
+              listStyle: 'none',
+              color: 'var(--text-secondary)',
+              lineHeight: '1.8'
+            }}>
+              <li>🚗 Desde Córdoba Capital: 3 horas</li>
+              <li>🛣️ Ruta Provincial 14 (asfaltada)</li>
+              <li>🏔️ Valle de Traslasierra</li>
+              <li>🅿️ Estacionamiento gratuito</li>
+              <li>🛬 Desde el Aeropuerto Internacional Valle del Conlara: 1 hora</li>
+            </ul>
           </div>
 
-          {/* Puntos de interés */}
           <div className="card" style={{backgroundColor: '#EFE6DC'}}>
-            <h4 style={{
-              color: 'var(--text-primary)',
-              fontSize: '1.2rem',
-              marginBottom: '1rem',
-              textAlign: 'center'
-            }}>
-              Puntos de interés cercanos
-            </h4>
             <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-              gap: '1rem'
+              display: 'flex',
+              alignItems: 'center',
+              gap: '1rem',
+              marginBottom: '1rem'
             }}>
-              {/* inicio cerro */}
-              <div style={{ textAlign: 'center', padding: '1rem' }}>
-                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🏔️</div>
-                <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
-                  Cerro Champaquí
-                </h5>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                  Acceso Los Molles
-                </p>
-              </div>
-              {/* fin cerro */}
-              {/* inicio feria */}
-              <div style={{ textAlign: 'center', padding: '1rem' }}>
-                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🎨</div>
-                <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
-                  Feria artesanal
-                </h5>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                  En el pueblo
-                </p>
-              </div> 
-              {/* fin feria */}
-              {/* inicio senderos */}
-              <div style={{ textAlign: 'center', padding: '1rem' }}>
-                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🥾</div>
-                <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
-                  Red de senderos
-                </h5>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                  Cercanía a distintos accesos
-                </p>
-              </div>
-              {/* fin senderos */}
-              {/* inicio bodegas */}
-              <div style={{ textAlign: 'center', padding: '1rem' }}>
-                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🍷</div>
-                <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
-                  Bodegas y viñedos
-                </h5>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                  Zona cercana
-                </p>
-              </div>
-              {/* fin bodegas */}
-              {/* inicio dique */}
-              <div style={{ textAlign: 'center', padding: '1rem' }}>
-                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🌊</div>
-                <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
-                  Dique La Viña
-                </h5>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                  20 min en auto
-                </p>
-              </div>
-              {/* fin dique */} 
-              {/* inicio balneario */}
-              <div style={{ textAlign: 'center', padding: '1rem' }}>
-                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>💧</div>
-                <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
-                  Balneario Guasmara
-                </h5>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                  5 min en auto
-                </p>
-              </div>
-              {/* fin balneario */}                           
+              <Clock size={24} style={{ color: 'var(--text-primary)' }} />
+              <h4 style={{ color: 'var(--text-primary)', fontSize: '1.1rem' }}>
+                Horarios
+              </h4>
+            </div>
+            <div style={{ color: 'var(--text-secondary)', lineHeight: '1.8' }}>
+              <p><strong>Check-in:</strong> Desde las 13:00 hs</p>
+              <p><strong>Check-out:</strong> Hasta las 10:00 hs</p>
+              <p><strong>Recepción:</strong> 24 horas</p>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: '0.25rem', fontStyle: 'italic' }}>
+              Tanto el horario de check-in como el de check-out podrán ser modificados con antelación.
+            </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Fila 3: Puntos de interés (más ancho, menos alto) */}
+        <div className="card" style={{backgroundColor: '#EFE6DC', padding: '2rem'}}>
+          <h4 style={{
+            color: 'var(--text-primary)',
+            fontSize: '1.2rem',
+            marginBottom: '1.5rem',
+            textAlign: 'center'
+          }}>
+            Puntos de interés cercanos
+          </h4>
+          <div className="puntos-interes-grid" style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '1.5rem'
+          }}>
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🏔️</div>
+              <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem', fontSize: '1rem' }}>
+                Cerro Champaquí
+              </h5>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
+                Acceso Los Molles
+              </p>
+            </div>
+            
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🎨</div>
+              <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem', fontSize: '1rem' }}>
+                Feria artesanal
+              </h5>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
+                En el pueblo
+              </p>
+            </div>
+            
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🥾</div>
+              <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem', fontSize: '1rem' }}>
+                Red de senderos
+              </h5>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
+                Cercanía a distintos accesos
+              </p>
+            </div>
+            
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🍷</div>
+              <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem', fontSize: '1rem' }}>
+                Bodegas y viñedos
+              </h5>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
+                Zona cercana
+              </p>
+            </div>
+            
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🌊</div>
+              <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem', fontSize: '1rem' }}>
+                Dique La Viña
+              </h5>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
+                20 min en auto
+              </p>
+            </div>
+            
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>💧</div>
+              <h5 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem', fontSize: '1rem' }}>
+                Balneario Guasmara
+              </h5>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
+                5 min en auto
+              </p>
             </div>
           </div>
         </div>

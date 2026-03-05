@@ -138,6 +138,16 @@ h1, h2, h3, h4, h5, h6 {
   .mobile-menu-btn {
     display: block !important;
   }
+  
+  .puntos-interes-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .puntos-interes-grid {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 .nav-link:hover {
