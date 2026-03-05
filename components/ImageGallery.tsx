@@ -13,13 +13,13 @@ export default function ImageGallery() {
   const generateImages = () => {
     const images = [];
     
-    // Imágenes PACHA (Nina)
+    // Imágenes PACHA
     for (let i = 1; i <= 14; i++) {
       if ([4, 5].includes(i)) continue; // Saltar números que no existen
       images.push({
         src: `/images/gallery/PACHA${i}.jpg`,
-        alt: `Cabaña Nina - Foto ${i}`,
-        category: 'Nina'
+        alt: `Cabaña Pacha - Foto ${i}`,
+        category: 'Pacha'
       });
     }
     
